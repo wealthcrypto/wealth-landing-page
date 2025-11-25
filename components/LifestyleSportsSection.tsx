@@ -73,7 +73,7 @@ export default function LifestyleSportsSection() {
           </h2>
           
           <p className="lifestyle-text max-w-3xl mx-auto">
-            WEALTH Token opens doors to premium experiences across the activities you love most. 
+            WEALTH Crypto opens doors to premium experiences across the activities you love most. 
             Every moment is an opportunity to live exceptionally.
           </p>
         </motion.div>
@@ -181,7 +181,7 @@ export default function LifestyleSportsSection() {
                 More Than Just Access
               </h3>
               <p className="lifestyle-text mb-6">
-                WEALTH Token doesn&apos;t just give you access—it gives you <em>community</em>. 
+                WEALTH Crypto doesn&apos;t just give you access—it gives you <em>community</em>. 
                 Every experience connects you with others who share your passions.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

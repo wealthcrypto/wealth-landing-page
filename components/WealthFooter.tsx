@@ -75,7 +75,7 @@ export default function WealthFooter() {
   };
 
   return (
-    <footer className="bg-wealth-navy text-white">
+    <footer className="bg-[#1acc86] text-gray-900">
       {/* Main Footer Content */}
       <div className="max-content container-padding py-16">
         <motion.div
@@ -98,7 +98,7 @@ export default function WealthFooter() {
                 </div>
                 <div>
                   <h3 className="font-heading text-2xl text-white">
-                    WEALTH Token
+                    WEALTH Crypto
                   </h3>
                   <p className="font-accent text-sm text-wealth-mint">
                     Live the Good Life
@@ -106,14 +106,14 @@ export default function WealthFooter() {
                 </div>
               </div>
 
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-white leading-relaxed mb-6">
                 Connecting you to premium lifestyle experiences across sports, music, 
                 dining, and community. Join thousands who are already living exceptionally.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-sm text-gray-300">
+                <div className="flex items-center gap-2 text-sm text-white">
                   <Mail className="w-4 h-4 text-wealth-mint" />
                   hi@wealthcrypto.fund
                 </div>
@@ -136,7 +136,7 @@ export default function WealthFooter() {
                   <li key={linkIndex}>
                     <a 
                       href={link.href}
-                      className="text-gray-300 hover:text-wealth-mint transition-colors text-sm flex items-center gap-1 group"
+                      className="text-white hover:text-wealth-mint transition-colors text-sm flex items-center gap-1 group"
                     >
                       {link.name}
                       {'external' in link && link.external && (
@@ -162,14 +162,14 @@ export default function WealthFooter() {
             <h4 className="font-heading text-xl text-white mb-3">
               Stay Connected
             </h4>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-white text-sm mb-4">
               Get exclusive updates, early access to experiences, and community highlights.
             </p>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-wealth bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-wealth-mint"
+                className="flex-1 px-4 py-2 rounded-wealth bg-gray-800 border border-gray-600 text-white placeholder-white focus:outline-none focus:border-wealth-mint"
               />
               <button className="px-6 py-2 bg-wealth-mint text-wealth-navy font-semibold rounded-wealth hover: transition-colors">
                 Subscribe
@@ -185,8 +185,8 @@ export default function WealthFooter() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             
             {/* Copyright */}
-            <div className="text-sm text-gray-400">
-              © 2025 WEALTH Token. All rights reserved. Built with{" "}
+            <div className="text-sm text-white">
+              © 2025 WEALTH Crypto. All rights reserved. Built with{" "}
               <Heart className="inline w-4 h-4 text-wealth-coral mx-1" />
               for the community.
             </div>
@@ -202,7 +202,7 @@ export default function WealthFooter() {
                     className="w-10 h-10 rounded-full bg-gray-800 hover:bg-wealth-mint border border-gray-600 hover:border-wealth-mint flex items-center justify-center transition-all duration-300 group"
                     title={platform.name}
                   >
-                    <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                    <IconComponent className="w-5 h-5 text-white group-hover:text-white transition-colors" />
                   </a>
                 );
               })}
@@ -210,11 +210,11 @@ export default function WealthFooter() {
 
             {/* Legal Links */}
             <div className="flex items-center gap-4 text-sm">
-              <a href="#" className="text-gray-400 hover:text-wealth-mint transition-colors">
+              <a href="#" className="text-white hover:text-wealth-mint transition-colors">
                 Privacy Policy
               </a>
               <span className="text-gray-600">•</span>
-              <a href="#" className="text-gray-400 hover:text-wealth-mint transition-colors">
+              <a href="#" className="text-white hover:text-wealth-mint transition-colors">
                 Terms of Service
               </a>
             </div>

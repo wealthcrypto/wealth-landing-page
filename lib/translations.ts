@@ -84,7 +84,7 @@ export const translations = {
         },
         step3: {
           label: "Step 3",
-          title: "Buy $WEALTH Token",
+          title: "Buy $WEALTH Crypto",
           description: "Find WEALTH TOKEN ($WEALTH) trading pair and make a purchase. Tokens go directly to your Indodax wallet.",
           action: "Buy Token"
         }

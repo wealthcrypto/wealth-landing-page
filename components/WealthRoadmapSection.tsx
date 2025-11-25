@@ -19,7 +19,7 @@ export default function WealthRoadmapSection() {
       status: "completed",
       description: "Token launch, community building, and initial partnerships established.",
       achievements: [
-        "WEALTH Token Launch",
+        "WEALTH Crypto Launch",
         "Community of 10,000+ members",
         "Initial partner venues secured",
         "Beta testing platform"

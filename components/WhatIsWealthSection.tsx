@@ -69,12 +69,12 @@ export default function WhatIsWealthSection() {
           <h2 className="font-heading text-4xl md:text-5xl text-wealth-navy mb-6">
             What is{" "}
             <span className="doodle-bg px-4 py-2 transform rotate-1 inline-block text-[#d18f03]">
-              WEALTH Token?
+              WEALTH Crypto?
             </span>
           </h2>
           
           <p className="lifestyle-text text-center">
-            More than a cryptocurrency, WEALTH Token is your key to a curated lifestyle. 
+            More than a cryptocurrency, WEALTH Crypto is your key to a curated lifestyle. 
             We believe that wealth isn&apos;t just about money—it&apos;s about rich experiences, 
             meaningful connections, and living life to the fullest.
           </p>

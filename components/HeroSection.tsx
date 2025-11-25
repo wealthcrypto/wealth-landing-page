@@ -148,7 +148,7 @@ export default function HeroSection() {
         >
           {[
             { label: t.hero.stats.price, value: "Rp 1.000", unit: "$WEALTH" },
-            { label: t.hero.stats.supply, value: "100M", unit: "$WEALTH" },
+            { label: t.hero.stats.supply, value: "1,8M", unit: "$WEALTH" },
             { label: t.hero.stats.listed, value: "Indodax", unit: "CEX" }
           ].map((stat, index) => (
             <motion.div

@@ -8,6 +8,7 @@ import WealthCommunitySection from "@/components/WealthCommunitySection";
 import WealthFAQSection from "@/components/WealthFAQSection";
 import WealthFooter from "@/components/WealthFooter";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Header from "@/components/Header";
 
 /* 
   ═══════════════════════════════════════════════
@@ -54,8 +55,8 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden">
       {/* 🌐 Language Switcher - Fixed top right */}
-      <LanguageSwitcher />
-      
+      {/* <LanguageSwitcher /> */}
+      <Header />
       {/* 🎪 Hero Section - Festival vibes with doodle illustration */}
       <WealthHeroSection />
       

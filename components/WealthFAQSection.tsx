@@ -16,13 +16,13 @@ export default function WealthFAQSection() {
 
   const faqs = [
     {
-      question: "What is WEALTH Token and how does it work?",
-      answer: "WEALTH Token is your digital key to premium lifestyle experiences. Think of it like a membership card that gives you access to curated sports, music, dining, and community events. The more WEALTH you hold, the more exclusive experiences become available to you.",
+      question: "What is WEALTH Crypto and how does it work?",
+      answer: "WEALTH Crypto is your digital key to premium lifestyle experiences. Think of it like a membership card that gives you access to curated sports, music, dining, and community events. The more WEALTH you hold, the more exclusive experiences become available to you.",
       category: "basics"
     },
     {
-      question: "How do I get WEALTH Tokens?",
-      answer: "You can purchase WEALTH Tokens through our website or on supported cryptocurrency exchanges. We also offer various ways to earn WEALTH through community participation, referrals, and attending experiences. Our team can guide you through the entire process if you're new to digital tokens.",
+      question: "How do I get WEALTH Cryptos?",
+      answer: "You can purchase WEALTH Cryptos through our website or on supported cryptocurrency exchanges. We also offer various ways to earn WEALTH through community participation, referrals, and attending experiences. Our team can guide you through the entire process if you're new to digital tokens.",
       category: "basics"
     },
     {

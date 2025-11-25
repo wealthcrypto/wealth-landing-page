@@ -50,8 +50,8 @@ export default function WealthTokenomicsSection() {
   const keyFeatures = [
     {
       title: "Total Supply",
-      value: "1 Billion",
-      detail: "WEALTH Tokens",
+      value: "1,8 M",
+      detail: "WEALTH Cryptos",
       description: "Fixed supply ensures scarcity and value preservation"
     },
     {
@@ -59,18 +59,6 @@ export default function WealthTokenomicsSection() {
       value: "Utility",
       detail: "Lifestyle Access",
       description: "Designed for experiences, not speculation"
-    },
-    {
-      title: "Burn Mechanism",
-      value: "2.5%",
-      detail: "Quarterly",
-      description: "Regular token burns to maintain healthy economics"
-    },
-    {
-      title: "Staking Rewards",
-      value: "Up to 12%",
-      detail: "APY",
-      description: "Earn rewards for holding and participating"
     }
   ];
 
@@ -107,7 +95,7 @@ export default function WealthTokenomicsSection() {
           </h2>
           
           <p className="lifestyle-text max-w-3xl mx-auto">
-            WEALTH Token economics are designed for sustainability and community growth. 
+            WEALTH Crypto economics are designed for sustainability and community growth. 
             Every token has a purpose in building the lifestyle ecosystem we&apos;re creating together.
           </p>
         </motion.div>
@@ -118,13 +106,13 @@ export default function WealthTokenomicsSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-16"
         >
           {keyFeatures.map((feature, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="wealth-card-hover text-center"
+              className="wealth-card-hover text-center bg-white"
             >
               <div className="p-6">
                 <div className="font-heading text-3xl text-wealth-navy mb-2">
@@ -239,7 +227,7 @@ export default function WealthTokenomicsSection() {
               Built for the Long Term
             </h3>
             <p className="lifestyle-text mb-6 max-w-3xl mx-auto">
-              WEALTH Token isn&apos;t designed for quick flips or speculation. It&apos;s built to grow 
+              WEALTH Crypto isn&apos;t designed for quick flips or speculation. It&apos;s built to grow 
               in value as our community and ecosystem expand, creating sustainable value for 
               everyone involved.
             </p>

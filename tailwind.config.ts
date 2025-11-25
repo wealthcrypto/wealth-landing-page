@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // WEALTH Token Brand Colors - Light Mode
+        // WEALTH Crypto Brand Colors - Light Mode
         wealth: {
           bg: '#FFFFFF',           // Clean White Background
           mint: '#A7F3D0',         // Mint Pastel (Primary)
@@ -73,7 +73,7 @@ const config: Config = {
       },
       fontFamily: {
         heading: ['var(--font-concert-one)', 'cursive'],
-        body: ['var(--font-dosis)', 'sans-serif'],
+        body: ['var(--font-fredoka)', 'sans-serif'],
         accent: ['var(--font-delius)', 'cursive'],
       },
       animation: {
