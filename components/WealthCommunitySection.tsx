@@ -100,7 +100,7 @@ export default function WealthCommunitySection() {
   };
 
   return (
-    <section className="section-padding bg-coral-wash">
+    <section className="section-padding">
       <div className="max-content container-padding">
         
         {/* Section Header */}
