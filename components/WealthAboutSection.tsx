@@ -19,8 +19,8 @@ const WealthAboutSection = () => {
             <div className="max-w-xl space-y-6 text-wealth-navy text-lg font-body">
               <span>
                 More than a cryptocurrency, WEALTH Token is your key to a
-                curated lifestyle. We believe that wealth isn't just about
-                money—it's about rich experiences, meaningful connections, and
+                curated lifestyle. We believe that wealth isn&apos;t just about
+                money—it&apos;s about rich experiences, meaningful connections, and
                 living life to the fullest.
               </span>
             </div>

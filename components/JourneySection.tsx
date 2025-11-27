@@ -7,6 +7,7 @@ import ActiveIcon from "@/public/assets/ActiveIcon.svg";
 import PlannedIcon from "@/public/assets/PlannedIcon.svg";
 import CircleGreen from "@/public/assets/CicleGreen.svg";
 import CicleRed from "@/public/assets/CicleRed.svg";
+import Euforia from "@/public/assets/Euforia.svg";
 import { motion } from "framer-motion";
 
 const JourneySection = () => {
@@ -33,7 +34,7 @@ const JourneySection = () => {
       className="w-full flex items-center justify-center my-20 font-body"
     >
         <div className="absolute bottom-0 left-0 w-full -z-10 pointer-events-none">
-            <img src="/assets/Euforia.svg" alt="Euforia background" className="w-full object-contain" />
+            <Image src="/assets/Euforia.svg" alt="Euforia background" fill className="object-contain" />
         </div>
       <div className="w-10/12 md:w-9/12">
         <motion.div
@@ -50,7 +51,7 @@ const JourneySection = () => {
           className="w-10/12 md:w-6/12 my-4 mb-24"
         >
           <span className="text-wealth-navy text-lg font-body text-center md:text-start">
-            Our roadmap isn't just about features—it's about building a lifestyle ecosystem that grows with our community's dreams and aspirations.
+            Our roadmap isn&apos;t just about features—it&apos;s about building a lifestyle ecosystem that grows with our community&apos;s dreams and aspirations.
           </span>
         </motion.div>
 
