@@ -35,10 +35,10 @@ export default function WealthFooter() {
     {
       title: "Community",
       links: [
-        { name: "Discord", href: "#", external: true },
-        { name: "Telegram", href: "#", external: true },
-        { name: "Twitter", href: "#", external: true },
-        { name: "Instagram", href: "#", external: true }
+        { name: "Discord", href: "https://discord.gg/K2kBy5Nr", external: true },
+        { name: "Telegram Community", href: "https://t.me/thewealthcrypto_community", external: true },
+        { name: "Telegram", href: "https://t.me/thewealthcrypto", external: true },
+        { name: "Instagram", href: "https://www.instagram.com/thewealthcrypto/", external: true }
       ]
     },
     {
@@ -53,10 +53,10 @@ export default function WealthFooter() {
   ];
 
   const socialPlatforms = [
-    { name: "Discord", icon: FaDiscord, href: "#" },
-    { name: "Telegram", icon: FaTelegramPlane, href: "#" },
-    { name: "Twitter", icon: FaTwitter, href: "#" },
-    { name: "Instagram", icon: FaInstagram, href: "#" }
+    { name: "Discord", icon: FaDiscord, href: "https://discord.gg/K2kBy5Nr" },
+    { name: "Telegram Community", icon: FaTelegramPlane, href: "https://t.me/thewealthcrypto_community" },
+    { name: "Telegram", icon: FaTelegramPlane, href: "https://t.me/thewealthcrypto" },
+    { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/thewealthcrypto/" }
   ];
 
   const containerVariants = {
