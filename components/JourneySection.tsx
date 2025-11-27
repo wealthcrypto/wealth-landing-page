@@ -34,7 +34,7 @@ const JourneySection = () => {
       className="w-full flex items-center justify-center my-20 font-body"
     >
         <div className="absolute bottom-0 left-0 w-full -z-10 pointer-events-none">
-            <Image src="/assets/Euforia.svg" alt="Euforia background" fill className="object-contain" />
+            <Image src={Euforia} alt="Euforia background" fill className="object-contain" />
         </div>
       <div className="w-10/12 md:w-9/12">
         <motion.div
