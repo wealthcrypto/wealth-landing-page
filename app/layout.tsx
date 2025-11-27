@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Concert_One, Fredoka, Delius } from "next/font/google";
+import { Concert_One, Varela_Round, Delius } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
@@ -18,11 +18,11 @@ const concertOne = Concert_One({
   weight: '400',
 });
 
-const fredoka = Fredoka({ 
+const varelaRound = Varela_Round({ 
   subsets: ["latin"],
   display: 'swap',
-  variable: '--font-fredoka',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-varela-round',
+  weight: '400',
 });
 
 const delius = Delius({ 
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${fredoka.variable} ${concertOne.variable} ${delius.variable} font-body bg-coral-wash text-wealth-navy antialiased`}>
+      <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-coral-wash text-wealth-navy antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

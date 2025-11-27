@@ -1,17 +1,24 @@
 "use client";
 
 import React from "react";
-import Flips from "@/public/flips.png";
 import GoodLife from "@/public/good_life.png";
 import Bounces from "@/public/bounces.png";
-import Gtw from "@/public/gtw.png";
 import Circle from "@/public/circle.png";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import Community from "@/public/assets/community.svg";
+import Fnb from "@/public/assets/fnb.svg";
+import Music from "@/public/assets/music.svg";
+import Sports from "@/public/assets/sport.svg";
+
+type StaticImageData = typeof Sports;
+
 export default function WealthHeroSection() {
   const list_head: string[] = ["Sports", "Music", "F&B", "Community"];
+
+  const list_icons: StaticImageData[] = [Sports, Music, Fnb, Community];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -33,37 +40,57 @@ export default function WealthHeroSection() {
       initial="initial"
       animate="animate"
       variants={staggerContainer}
-      className="relative min-h-screen flex items-center justify-center px-4"
+      className="relative min-h-dvh flex items-center justify-center px-4"
     >
       <motion.div
         variants={fadeInUp}
-        className="text-center space-y-6 max-w-full -mt-20 md:-mt-32"
+        className="text-center max-w-full -mt-20 md:-mt-32"
       >
         {/* Headline */}
-        <span className="text-md md:text-lg font-body font-normal text-wealth-navy">
-          {list_head.map((word, index) => (
-            <motion.span
-              key={index}
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-10 mb-10 md:mb-20">
+          {list_icons.map((icon, index) => (
+            <motion.div
+              key={list_head[index]}
               variants={fadeInUp}
-              className="inline-block mx-2 md:mx-4 border px-4 py-1 rounded-full text-gray-800 border-[#1dcb86]"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="flex flex-col items-center"
             >
-              {word}
-            </motion.span>
+              <div className="mx-2 bg-[#CE910E] rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex items-center justify-center mb-2">
+                <Image
+                  src={icon}
+                  alt={list_head[index]}
+                  className="w-full h-full object-contain p-1.5 sm:p-2 md:p-3"
+                />
+              </div>
+              <span className="text-xs sm:text-sm md:text-base font-body text-wealth-navy">{list_head[index]}</span>
+            </motion.div>
           ))}
-        </span>
+        </div>
         <motion.span
           variants={fadeInUp}
-          className="text-4xl md:text-7xl font-body font-normal text-wealth-navy"
+          className="text-3xl sm:text-4xl md:text-7xl font-body font-normal text-wealth-navy"
         >
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
             <span>Live the</span>
-            <Image
-              src={GoodLife}
-              alt="good life"
-              className="inline-block w-40 md:w-60 object-contain"
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Image
+                src={GoodLife}
+                alt="good life"
+                className="inline-block w-32 sm:w-40 md:w-60 object-contain"
+              />
+            </motion.div>
           </div>
-          <div className="mt-2 md:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-2 md:mt-0"
+          >
             powered by{" "}
             <span
               className="bg-gradient-to-r from-[#d59c19] -mt-4 to-[#b46f27] bg-clip-text text-transparent"
@@ -71,7 +98,7 @@ export default function WealthHeroSection() {
             >
               $WEALTH
             </span>
-          </div>
+          </motion.div>
         </motion.span>
 
         {/* Subheading */}
@@ -84,43 +111,27 @@ export default function WealthHeroSection() {
         </motion.p>
 
         {/* CTA Button */}
-        <motion.a
-          variants={fadeInUp}
-          href=""
-          className="mt-4 inline-block"
-        >
-          <button className="!bg-[#1dcb86] !text-white ps-4 md:ps-6 pe-2 font-body text-base md:text-lg py-2 rounded-full inline-flex items-center gap-2">
+        <motion.a variants={fadeInUp} href="" className="mt-8 md:mt-12 inline-block">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="!bg-[#1dcb86] !text-white ps-4 md:ps-6 pe-2 font-body text-sm sm:text-base md:text-lg py-2 rounded-full inline-flex items-center gap-2"
+          >
             Explore Wealth
-            <div className="transform rotate-[-45deg] bg-white rounded-full ml-2 p-3 md:p-4 text-[#1dcb86]">
-              <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
-            </div>
-          </button>
+            <motion.div
+              whileHover={{ rotate: 0 }}
+              initial={{ rotate: -45 }}
+              transition={{ duration: 0.3 }}
+              className="transform rotate-[-45deg] bg-white rounded-full ml-2 p-2 sm:p-3 md:p-4 text-[#1dcb86]"
+            >
+              <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+            </motion.div>
+          </motion.button>
         </motion.a>
 
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-            <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: [0, -10, 0],
-              rotate: [0, 360],
-            }}
-            transition={{
-              opacity: { duration: 0.8, delay: 0.2 },
-              scale: { duration: 0.2, delay: 0.2 },
-              y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-              rotate: { duration: 10, repeat: Infinity, ease: "linear" },
-            }}
-            className="absolute top-1/4 left-[10%] md:left-[27%] w-20 h-20 md:w-32 md:h-32"
-            >
-            <Image
-              src={Flips}
-              alt="flips"
-              className="w-full h-full object-cover rounded-full"
-            />
-            </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{
@@ -141,26 +152,7 @@ export default function WealthHeroSection() {
               className="w-full h-full object-cover rounded-full"
             />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: [0, -10, 0],
-            }}
-            transition={{
-              opacity: { duration: 0.8, delay: 0.6 },
-              scale: { duration: 0.8, delay: 0.6 },
-              y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            }}
-            className="absolute top-20 md:top-40 right-[10%] md:right-[27%] w-16 h-16 md:w-28 md:h-28"
-          >
-            <Image
-              src={Gtw}
-              alt="circle"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{

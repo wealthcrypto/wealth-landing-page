@@ -1,14 +1,9 @@
 import WealthHeroSection from "@/components/WealthHeroSection";
-import WhatIsWealthSection from "@/components/WhatIsWealthSection";
-import LifestyleSportsSection from "@/components/LifestyleSportsSection";
-import WealthRoadmapSection from "@/components/WealthRoadmapSection";
-import WealthTokenomicsSection from "@/components/WealthTokenomicsSection";
-import WealthPartnersSection from "@/components/WealthPartnersSection";
-import WealthCommunitySection from "@/components/WealthCommunitySection";
-import WealthFAQSection from "@/components/WealthFAQSection";
-import WealthFooter from "@/components/WealthFooter";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Header from "@/components/Header";
+import WealthExperience from "@/components/WealthExperience";
+import WealthAboutSection from "@/components/WealthAboutSection";
+import JoinSection from "@/components/JoinSection";
+import JourneySection from "@/components/JourneySection";
 
 /* 
   ═══════════════════════════════════════════════
@@ -56,33 +51,19 @@ export default function Home() {
     <main className="relative overflow-hidden">
       {/* 🌐 Language Switcher - Fixed top right */}
       {/* <LanguageSwitcher /> */}
-      <Header />
-      {/* 🎪 Hero Section - Festival vibes with doodle illustration */}
-      <WealthHeroSection />
-      
-      {/* 🎯 What is WEALTH - Lifestyle token explanation */}
-      <WhatIsWealthSection />
-      
-      {/* 🏓 Lifestyle & Sports - Core experience categories */}
-      {/* <LifestyleSportsSection /> */}
-      
-      {/* 🗺️ Roadmap - Development timeline */}
-      <WealthRoadmapSection />
-      
-      {/* 📊 Tokenomics - Economics breakdown */}
-      <WealthTokenomicsSection />
-      
-      {/* 🤝 Partners - Premium venue showcase */}
-      {/* <WealthPartnersSection /> */}
-      
-      {/* 👥 Community - Discord/Telegram CTAs */}
-      <WealthCommunitySection />
-      
-      {/* ❓ FAQ - Beginner-friendly questions */}
-      <WealthFAQSection />
-      
-      {/* 🦶 Footer - Clean minimal design */}
-      <WealthFooter />
+      <div className="h-dvh">
+        <Header />
+        {/* 🎪 Hero Section - Festival vibes with doodle illustration */}
+        <WealthHeroSection />
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+      </div>
+      <WealthExperience />
+
+      <WealthAboutSection />
+      <JoinSection />
+      <JourneySection />
     </main>
   );
 }

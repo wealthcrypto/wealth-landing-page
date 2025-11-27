@@ -25,7 +25,7 @@ export default function Header() {
                     <a
                         key={link}
                         href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="px-4 py-2 border-b border-red-300 text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+                        className="px-4 py-2 border rounded-full border-black text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105"
                     >
                         {link}
                     </a>
