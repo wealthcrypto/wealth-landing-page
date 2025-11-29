@@ -18,7 +18,7 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-4">
                 {[
                     "Home",
-                    "Shop",
+                    "Whitepaper",
                     "About Us",
                     "Contact",
                 ].map((link) => (
@@ -57,7 +57,7 @@ export default function Header() {
                     <nav className="flex flex-col items-center gap-4 py-4">
                         {[
                             "Home",
-                            "Shop",
+                            "Whitepaper",
                             "About Us",
                             "Contact",
                         ].map((link) => (

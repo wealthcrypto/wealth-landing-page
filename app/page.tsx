@@ -4,6 +4,9 @@ import WealthExperience from "@/components/WealthExperience";
 import WealthAboutSection from "@/components/WealthAboutSection";
 import JoinSection from "@/components/JoinSection";
 import JourneySection from "@/components/JourneySection";
+import FutureSection from "@/components/FutureSection";
+import WealthEconomicSection from "@/components/WealthEconomicSection";
+import DistributionSection from "@/components/DistributionSection";
 
 /* 
   ═══════════════════════════════════════════════
@@ -64,6 +67,12 @@ export default function Home() {
       <WealthAboutSection />
       <JoinSection />
       <JourneySection />
+      <FutureSection />
+      <WealthEconomicSection />
+      <DistributionSection />
+       <div className="flex items-center justify-center">
+        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+      </div>
     </main>
   );
 }
