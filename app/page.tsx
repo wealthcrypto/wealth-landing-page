@@ -12,6 +12,7 @@ import CommunitySection from "@/components/CommunitySection";
 import GroupSection from "@/components/GroupSection";
 import ReviewSection from "@/components/ReviewSection";
 import CommunityAwaits from "@/components/CommunityAwaits";
+import Footer from "@/components/Footer";
 
 /* 
   ═══════════════════════════════════════════════
@@ -83,6 +84,7 @@ export default function Home() {
       <GroupSection />
       <ReviewSection />
       <CommunityAwaits />
+      <Footer />
     </main>
   );
 }
