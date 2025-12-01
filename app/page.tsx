@@ -7,6 +7,11 @@ import JourneySection from "@/components/JourneySection";
 import FutureSection from "@/components/FutureSection";
 import WealthEconomicSection from "@/components/WealthEconomicSection";
 import DistributionSection from "@/components/DistributionSection";
+import BuildSection from "@/components/BuildSection";
+import CommunitySection from "@/components/CommunitySection";
+import GroupSection from "@/components/GroupSection";
+import ReviewSection from "@/components/ReviewSection";
+import CommunityAwaits from "@/components/CommunityAwaits";
 
 /* 
   ═══════════════════════════════════════════════
@@ -73,6 +78,11 @@ export default function Home() {
        <div className="flex items-center justify-center">
         <div className="h-[1px] w-3/4 bg-[#19CC85]" />
       </div>
+      <BuildSection />
+      <CommunitySection />
+      <GroupSection />
+      <ReviewSection />
+      <CommunityAwaits />
     </main>
   );
 }
