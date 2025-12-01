@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Twitter,
-  Send,
-  Github,
-  MessageCircle,
-  ArrowUpRight,
-  Heart,
-} from "lucide-react";
+import { ArrowUpRight, Heart } from "lucide-react";
 import { slideUp, rotateContinuous } from "@/lib/animations";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import Connected from "@/public/assets/Connected.svg";
 import Logo from "@/public/assets/Logo.svg";
+import { FaDiscord, FaTelegram, FaTelegramPlane } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+
+import Ascend from "@/public/Ascend.svg";
+import Circle from "@/public/Circle.svg";
+import Growth from "@/public/Growth.svg";
+import Stars from "@/public/Stars.svg";
 
 /*
   Updated Footer to match provided design:
@@ -24,10 +24,13 @@ import Logo from "@/public/assets/Logo.svg";
 */
 
 const socialLinks = [
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Send, label: "Telegram", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: MessageCircle, label: "Discord", href: "#" },
+  { icon: FaDiscord, label: "Discord", href: "https://discord.gg/K2kBy5Nr" },
+  {
+    icon: FaTelegramPlane,
+    label: "Telegram",
+    href: "https://t.me/thewealthcrypto",
+  },
+  { icon: FaTwitter, label: "Twitter", href: "https://x.com/thewealthcrypto" },
 ];
 
 export default function Footer() {
@@ -77,9 +80,15 @@ export default function Footer() {
       items: [
         { name: "Discord", href: "https://discord.gg/K2kBy5Nr" },
         { name: "Telegram", href: "https://t.me/thewealthcrypto" },
-        { name: "Telegram Community", href: "https://t.me/thewealthcrypto_community" },
+        {
+          name: "Telegram Community",
+          href: "https://t.me/thewealthcrypto_community",
+        },
         { name: "Twitter", href: "https://x.com/thewealthcrypto" },
-        { name: "Instagram", href: "https://www.instagram.com/thewealthcrypto/" },
+        {
+          name: "Instagram",
+          href: "https://www.instagram.com/thewealthcrypto/",
+        },
       ],
     },
     {
@@ -104,18 +113,20 @@ export default function Footer() {
         {/* Top simple brand + email (left) and link groups (center/right) */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-12">
           <div className="flex-1 flex items-start gap-4">
-            
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <div className="space-y-4">
               <Image src={Logo} alt="WEALTH Logo" className="" />
               <p className="text-sm text-[#0b4f3b]/80 max-w-xs leading-relaxed">
                 {footer.description}
               </p>
-              <a href="mailto:hi@wealthcrypto.fund" className="inline-flex items-center gap-3 bg-[#00b67a] text-white pl-4 pr-1 py-1 rounded-full shadow-md font-semibold hover:bg-[#019f68] transition">
+              <a
+                href="mailto:hi@wealthcrypto.fund"
+                className="inline-flex items-center gap-3 bg-[#00b67a] text-white pl-4 pr-1 py-1 rounded-full shadow-md font-semibold hover:bg-[#019f68] transition"
+              >
                 hi@wealthcrypto.fund
                 <div className="bg-white p-4 rounded-full">
-                <ArrowUpRight className="w-3 h-3 text-[#00b67a]" />
-              </div>
+                  <ArrowUpRight className="w-3 h-3 text-[#00b67a]" />
+                </div>
               </a>
             </div>
           </div>
@@ -151,27 +162,31 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-         <div className="flex items-center justify-center my-10">
-        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
-      </div>
+        <div className="flex items-center justify-center my-10">
+          <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+        </div>
 
         {/* Stay connected hero */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center my-24 relative"
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4">
             <span className="text-4xl md:text-5xl font-body text-[#063b2e]">
               Stay
             </span>
-            <Image src={Connected} alt="Connected" className="h-16 md:h-20 w-auto" />
+            <Image
+              src={Connected}
+              alt="Connected"
+              className="h-16 md:h-20 w-auto"
+            />
           </div>
 
           <p className="mt-4 text-[#064235]/80 max-w-2xl mx-auto">
-            {footer.newsletter?.subtitle}
+            Get exclusive updates, early access to experiences, and community highlights.
           </p>
 
           <form className="mt-8 flex items-center justify-center gap-4 max-w-2xl mx-auto">
@@ -179,7 +194,7 @@ export default function Footer() {
               type="email"
               placeholder={footer.newsletter?.placeholder}
               aria-label="Email"
-              className="flex-1 min-w-0 px-6 py-3 rounded-full bg-white border border-green-100 shadow-sm placeholder:text-[#94cdb6] text-[#063b2e] focus:outline-none focus:ring-2 focus:ring-[#00b67a]/30"
+              className="flex-1 min-w-0 px-6 py-3 rounded-full bg-white border border-green-100 shadow-sm z-10 placeholder:text-[#94cdb6] text-[#063b2e] focus:outline-none focus:ring-2 focus:ring-[#00b67a]/30"
             />
             <button
               type="submit"
@@ -191,11 +206,53 @@ export default function Footer() {
               </div>
             </button>
           </form>
+
+          {/* Images Abs */}
+          {/* Decorative absolute images (decorative only - aria-hidden) */}
+          <div className="pointer-events-none -z-10">
+            <motion.div
+              variants={rotateContinuous}
+              initial="hidden"
+              animate="visible"
+              className="absolute -top-12 left-16 w-20 opacity-80"
+              aria-hidden="true"
+            >
+              <Image src={Stars} alt="" className="w-full h-auto" />
+
+            </motion.div>
+
+            <motion.div
+              variants={rotateContinuous}
+              initial="hidden"
+              animate="visible"
+              className="absolute -top-8 right-6 w-20 opacity-60"
+              aria-hidden="true"
+            >
+              <Image src={Growth} alt="" className="w-full h-auto" />
+
+            </motion.div>
+
+            <div
+              className="absolute left-1/4 bottom-8 w-16 opacity-70"
+              aria-hidden="true"
+            >
+              <Image src={Circle} alt="" className="w-full h-auto" />
+
+            </div>
+
+            <div
+              className="absolute right-32 bottom-6 w-16 opacity-60"
+              aria-hidden="true"
+            >
+              <Image src={Ascend} alt="" className="w-full h-auto" />
+
+            </div>
+          </div>
         </motion.div>
-         {/* Divider */}
-         <div className="flex items-center justify-center my-10">
-        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
-      </div>
+        {/* Divider */}
+        <div className="flex items-center justify-center my-10">
+          <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+        </div>
 
         {/* Bottom bar */}
         <div className="border-t border-green-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -215,9 +272,9 @@ export default function Footer() {
                     key={i}
                     href={s.href}
                     aria-label={s.label}
-                    className="w-9 h-9 bg-white border border-green-50 rounded-full flex items-center justify-center text-[#07563f]/90 shadow-sm hover:bg-[#e6fff5] transition"
+                    className="w-9 h-9 border border-[#19CC85] rounded-full flex items-center justify-center text-[#19CC85]/90 shadow-sm hover:bg-[#e6fff5] transition"
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-5 h-5" />
                   </a>
                 );
               })}
@@ -229,9 +286,6 @@ export default function Footer() {
               </a>
               <a href="#" className="hover:text-[#00b67a] transition">
                 {footer.bottomLinks?.terms}
-              </a>
-              <a href="#" className="hover:text-[#00b67a] transition">
-                {footer.bottomLinks?.cookies}
               </a>
             </div>
           </div>
