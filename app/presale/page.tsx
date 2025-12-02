@@ -45,7 +45,7 @@ const PresaleEndedPage = () => {
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Duration",
-      value: "1 Day",
+      value: "12 Hours",
       color: "text-wealth-navy"
     }
   ];
@@ -55,7 +55,7 @@ const PresaleEndedPage = () => {
       initial="initial"
       animate="animate"
       variants={staggerContainer}
-      className="min-h-screen bg-gradient-to-br from-wealth-mint-wash via-white to-wealth-coral-soft"
+      className="min-h-screen bg-[#fdefef]"
     >
         <div className="flex justify-start px-10 py-5">
             <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full text-[#1dcb86] font-medium">
