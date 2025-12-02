@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-[#FDEFEF] text-wealth-navy antialiased`}>
+      <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-[#fdccdb] text-wealth-navy antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

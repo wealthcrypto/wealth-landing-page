@@ -78,7 +78,7 @@ export default function Home() {
       <FutureSection />
       <WealthEconomicSection />
       <DistributionSection />
-       <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <div className="h-[1px] w-3/4 bg-[#19CC85]" />
       </div>
       <BuildSection />
