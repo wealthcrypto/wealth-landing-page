@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Clock, Users, TrendingUp } from "lucide-react";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const PresaleEndedPage = () => {
   const fadeInUp = {
@@ -58,9 +59,9 @@ const PresaleEndedPage = () => {
     >
         <div className="flex justify-start px-10 py-5">
             <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full text-[#1dcb86] font-medium">
-                <a href="/">
+                <Link href="/">
                     <Image src={Logo} alt="WEALTH Logo" className="w-10 h-10"/>
-                </a>
+                </Link>
           </div>
         </div>
       <div className="container mx-auto px-4 py-16">
