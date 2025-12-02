@@ -55,10 +55,10 @@ const PresaleEndedPage = () => {
       initial="initial"
       animate="animate"
       variants={staggerContainer}
-      className="min-h-screen bg-[#fdefef]"
+      className="min-h-screen bg-[#fdefef]/50"
     >
         <div className="flex justify-start px-10 py-5">
-            <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full text-[#1dcb86] font-medium">
+            <div className="inline-flex items-center gap-3  px-6 py-3 rounded-full text-[#1dcb86] font-medium">
                 <Link href="/">
                     <Image src={Logo} alt="WEALTH Logo" className="w-10 h-10"/>
                 </Link>
