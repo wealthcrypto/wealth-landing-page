@@ -1,5 +1,5 @@
 import React from "react";
-import CommunityFrame from "@/public/assets/CommunityFrame.svg";
+import CommunityFrame from "@/public/assets/Connections.svg";
 import Image from "next/image";
 
 const CommunitySection = () => {
@@ -23,15 +23,20 @@ const CommunitySection = () => {
         </div>
       </div>
       <div className="w-6/12 space-y-5">
-        <div className="flex items-end gap-3 justify-start">
-          <span>Join Our</span>
+        <div className="flex flex-col items-end gap-3 justify-start">
+          <span>Global Network,</span>
+          <div className="flex items-center justify-center ">
+            <span>Real</span>
           <Image
             src={CommunityFrame}
             alt="Community Frame"
             className="w-56 h-auto mt-4"
           />
+          </div>
+           <p className="w-3/4 font-body text-base text-end">The value of WEALTH extends far beyond the digital wallet; it is defined by the strength and accessibility of its global community.<br/>
+We are building the largest, most active decentralized social network for the Experience Economy, ensuring you can find connection, support, and engagement wherever your lifestyle takes you.</p>
         </div>
-        <p className="w-3/4 font-body text-base">Connect with like-minded individuals who share your passion for extraordinary experiences. Our community is the heart of everything we do.</p>
+       
       </div>
     </div>
   );

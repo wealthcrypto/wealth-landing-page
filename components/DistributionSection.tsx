@@ -4,6 +4,10 @@ import Community from '@/public/assets/Community2.svg';
 import Grow from '@/public/assets/Grow.svg';
 import Shield from '@/public/assets/Shiled.svg';
 import Team from '@/public/assets/Time.svg';
+import LineSpringRed from "./icons/LineSpringRed";
+import CircleGreen from "./icons/CircleGreen";
+import GrowthPink from "./icons/GrowhPink";
+import StarRed from "./icons/StarsRed";
 
 const DistributionSection: React.FC = () => {
   const items = [
@@ -41,120 +45,51 @@ const DistributionSection: React.FC = () => {
     },
   ];
 
-  const styles: { [k: string]: React.CSSProperties } = {
-    wrapper: {
-      padding: "40px 24px",
-      maxWidth: 980,
-      height: "100%",
-      margin: "0 auto",
-      fontFamily: "'Inter', system-ui, sans-serif",
-    },
-    header: { textAlign: "end", marginBottom: 28 },
-    titleRow: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-end",
-      gap: 12,
-    },
-    title: { fontSize: 28, fontWeight: 700, margin: 0 },
-    badge: {
-      background: "#11c179",
-      color: "white",
-      padding: "6px 20px",
-      borderRadius: 12,
-      fontSize: 16,
-      fontWeight: 600,
-    },
-    subtitle: { color: "#667085", fontSize: 13, marginTop: 8 },
-    grid: { display: "grid", gap: 18, marginTop: 18 },
-    card: {
-      display: "flex",
-      gap: 18,
-      alignItems: "center",
-      background: "#8ee6c8",
-      padding: "22px",
-      borderRadius: 18,
-      boxShadow: "0 8px 18px rgba(23, 42, 37, 0.08)",
-    },
-    iconWrap: {
-      minWidth: 64,
-      minHeight: 64,
-      borderRadius: "50%",
-      background: "#00b37a",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      boxShadow: "inset 0 -6px 10px rgba(0,0,0,0.06)",
-    },
-    content: { flex: 1 },
-    heading: { fontSize: 20, margin: 0, fontWeight: 700, color: "#032" },
-    amount: {
-      fontSize: 12,
-      color: "#032",
-      fontWeight: 700,
-      marginTop: 6,
-      opacity: 0.9,
-    },
-    desc: { fontSize: 12, marginTop: 8, color: "#0b3b34", opacity: 0.85 },
-    progressWrap: {
-      marginTop: 12,
-      background: "rgba(255,255,255,0.55)",
-      height: 12,
-      borderRadius: 999,
-      overflow: "hidden",
-    },
-    percentText: {
-      fontSize: 12,
-      marginTop: 8,
-      color: "#0b3b34",
-      fontWeight: 600,
-    },
-  };
-
-  const progressFill = (p: number): React.CSSProperties => ({
-    width: `${p}%`,
-    height: "18px",
-    background: "#f43b6b",
-    borderRadius: 999,
-    transition: "width 600ms ease",
-    boxShadow: "0 2px 6px rgba(244,59,107,0.25)",
-  });
-
   return (
-    <section style={styles.wrapper} aria-labelledby="distribution-heading">
-      <div style={styles.header}>
-        <div className="flex items-center justify-end mr-8 space-x-3">
-          <span className="text-4xl">Token</span>
-          <div className="bg-[#19CC85] mt-2 mb-6 flex items-center justify-center p-4 rounded-lg -rotate-1">
-            <span className="text-4xl text-white">Distribution</span>
+    <section className="py-10 md:py-16 lg:py-20 px-4 md:px-6 max-w-6xl mx-auto font-inter" aria-labelledby="distribution-heading">
+      <div className="text-center md:text-right mb-8 md:mb-12 font-body">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-end space-y-3 md:space-y-0 md:space-x-3 font-body pt-10 md:pt-20 relative">
+          <span className="text-2xl md:text-3xl lg:text-4xl">Token</span>
+          <div className="bg-[#19CC85] flex items-center justify-center p-3 md:p-4 rounded-lg -rotate-1 z-10">
+            <span className="text-2xl md:text-3xl lg:text-4xl text-white">Distribution</span>
           </div>
+          <LineSpringRed className="absolute -right-10 md:-right-20 -top-20 md:-top-42 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
         </div>
-        <p style={styles.subtitle}>
-          Transparent allocation focused on community value and long-term
-          sustainability.
+        <p className="text-gray-600 text-sm md:text-base mt-4 max-w-md mx-auto md:mx-0 md:ml-auto">
+          Transparent allocation focused on community value and long-term sustainability.
         </p>
       </div>
 
-      <div style={styles.grid}>
+      <div className="grid grid-cols-1 gap-4 md:gap-6 my-16 md:my-24 lg:my-36 relative">
+        <GrowthPink className="absolute -left-8 md:-left-16 -bottom-8 md:-bottom-16 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
+        <CircleGreen className="absolute -left-8 md:-left-16 -top-8 md:-top-16 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
+        <StarRed className="absolute -right-2 md:-right-4 top-1/2 w-16 h-16 md:w-24 md:h-24 pointer-events-none select-none z-30" />
+        <LineSpringRed className="absolute -right-10 md:-right-20 bottom-6 md:bottom-12 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
+        
         {items.map((it) => (
-          <article key={it.id} style={styles.card}>
-            <div style={styles.iconWrap} aria-hidden>
+          <article key={it.id} className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center bg-[#8ee6c8] p-6 md:p-8 lg:p-12 rounded-2xl shadow-lg z-10 relative">
+            <div className="min-w-[48px] md:min-w-[64px] min-h-[48px] md:min-h-[64px] rounded-full bg-[#00b37a] flex items-center justify-center shadow-inner mx-auto sm:mx-0">
               <Image
                 src={it.icon}
                 alt={it.title}
                 width={24}
                 height={24}
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
               />
             </div>
 
-            <div className="flex flex-col" style={styles.content}>
-              <span className="font-body text-3xl">{it.title}</span>
-              <span className="font-body text-xl">{it.amount}</span>
-              <p style={styles.desc}>{it.desc}</p>
-              <div className="!h-4" style={styles.progressWrap} aria-hidden>
-                <div style={progressFill(it.percent)} />
+            <div className="flex-1 w-full text-center sm:text-left">
+              <h3 className="font-body text-xl md:text-2xl lg:text-3xl font-bold text-green-900 mb-2">{it.title}</h3>
+              <p className="font-body text-base md:text-lg lg:text-xl font-bold text-green-900 opacity-90 mb-3">{it.amount}</p>
+              <p className="text-sm md:text-base text-green-800 opacity-85 mb-4">{it.desc}</p>
+              
+              <div className="bg-white/55 h-3 md:h-4 rounded-full overflow-hidden mb-2">
+                <div 
+                  className="h-full bg-[#f43b6b] rounded-full transition-all duration-600 shadow-sm"
+                  style={{ width: `${it.percent}%` }}
+                />
               </div>
+              <p className="text-xs md:text-sm text-green-800 font-semibold">{it.percent}% of total supply</p>
             </div>
           </article>
         ))}

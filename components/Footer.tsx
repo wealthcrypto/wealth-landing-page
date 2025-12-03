@@ -103,7 +103,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#e6fff5] border-t border-green-100 overflow-hidden">
+    <footer className="relative border-t border-green-100 overflow-hidden">
       {/* subtle decorative shapes */}
       <div className="absolute left-0 top-0 -translate-y-10 opacity-10 pointer-events-none">
         <div className="w-96 h-96 bg-green-200 rounded-full blur-[140px]" />

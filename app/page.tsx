@@ -15,77 +15,55 @@ import CommunityAwaits from "@/components/CommunityAwaits";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/FaqSection";
 import FaqContinue from "@/components/FaqContinue";
+import FaqSec from "@/public/assets/FaqSection.svg";
+import Image from "next/image";
 
-/* 
-  ═══════════════════════════════════════════════
-  🎪 WEALTH TOKEN LANDING PAGE
-  
-  Premium Lifestyle Token Landing Page
-  Theme: Clean Light Mode + Festival Vibes
-  Style: Minimalist with doodle illustrations
-  Colors: Mint Pastel + Coral + Navy Ink
-  
-  Tech Stack:
-  - Next.js 15 (App Router)
-  - Tailwind CSS (WEALTH brand colors)
-  - Framer Motion (Subtle animations)
-  - Lucide React (Icons + doodles)
-  
-  Sections:
-  1. Hero - Split layout with doodle festival illustration
-  2. What is WEALTH - Lifestyle token explanation
-  3. Lifestyle & Sports - Padel, Football, Music, F&B
-  4. Roadmap - Clean timeline with mint/coral indicators
-  5. Tokenomics - Beginner-friendly, no meme charts
-  6. Partners - Premium venue showcase
-  7. Community - Discord/Telegram CTAs
-  8. FAQ - Accordion, beginner-friendly
-  9. Footer - Clean navy ink styling
-  
-  Brand Colors:
-  - Mint Pastel: #A7F3D0 (Primary)
-  - Coral Pastel: #FB7185 (Secondary)  
-  - Navy Ink: #111827 (Text)
-  - White: #FFFFFF (Background)
-  - Mint Wash: rgba(167, 243, 208, 0.1) (Subtle bg)
-  
-  Fonts:
-  - Heading: Concert One
-  - Body: Dosis
-  - Accent: Delius
-  
-  ═══════════════════════════════════════════════
-*/
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-hidden !bg-[#fdefef] px-0">
       {/* 🌐 Language Switcher - Fixed top right */}
       {/* <LanguageSwitcher /> */}
-      <div className="h-dvh">
+      <div className="min-h-screen flex flex-col">
         <Header />
         {/* 🎪 Hero Section - Festival vibes with doodle illustration */}
-        <WealthHeroSection />
+        <div className="flex-1">
+          <WealthHeroSection />
+        </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center py-8 md:py-12">
         <div className="h-[1px] w-3/4 bg-[#19CC85]" />
       </div>
-      <WealthExperience />
+      {/* <WealthExperience /> */}
 
-      <WealthAboutSection />
-      <JoinSection />
-      <JourneySection />
-      <FutureSection />
-      <WealthEconomicSection />
-      <DistributionSection />
-       <div className="flex items-center justify-center">
+      <div className="py-8 md:py-16">
+        <WealthAboutSection />
+      </div>
+      
+      <div className="py-8 md:py-16">
+        <JourneySection />
+      </div>
+      <div className="py-8 md:py-16">
+        <FutureSection />
+      </div>
+      {/* <WealthEconomicSection /> */}
+      <div className="py-8 md:py-16">
+        <DistributionSection />
+      </div>
+      <div className="flex items-center justify-center py-8 md:py-12">
         <div className="h-[1px] w-3/4 bg-[#19CC85]" />
       </div>
-      <BuildSection />
-      <CommunitySection />
+      <div className="py-8 md:py-16">
+        <BuildSection />
+      </div>
+      
+      {/* <CommunitySection /> */}
       <GroupSection />
       <ReviewSection />
-      <CommunityAwaits />
+      <div className="overflow-hidden">
+        <Image src={FaqSec} alt="FAQ Section" className="w-full -mt-2 md:-mt-5 mb-6 md:mb-10" />
+      </div>
+      {/* <CommunityAwaits /> */}
       <FaqSection />
       <FaqContinue />
       <Footer />

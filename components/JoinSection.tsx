@@ -36,7 +36,7 @@ const JoinSection = () => {
             </div>
           </a>
         </div>
-        <Image src={JoinImages} alt="Join Images" className="w-5/12" />
+        <Image src={JoinImages} alt="Join Images" className="h-full" />
       </div>
     </div>
   );
