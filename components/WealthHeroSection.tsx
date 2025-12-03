@@ -39,9 +39,113 @@ export default function WealthHeroSection() {
       variants={staggerContainer}
       className="relative min-h-dvh flex items-center justify-center px-4"
     >
+      {/* Background Elements - moved outside main content */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 0.4 },
+            scale: { duration: 0.8, delay: 0.4 },
+            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute top-36 left-[8%] md:left-1/4 w-20 h-20 md:w-32 md:h-32"
+        >
+          <Image
+            src={Growth}
+            alt="growth"
+            className="w-full h-full"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 0.4 },
+            scale: { duration: 0.8, delay: 0.4 },
+            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute top-24 right-[10%] md:right-1/4 w-20 h-20 md:w-32 md:h-32"
+        >
+          <Image
+            src={Stars}
+            alt="stars"
+            className="w-full h-full"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 0.4 },
+            scale: { duration: 0.8, delay: 0.4 },
+            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute bottom-1/4 left-[10%] md:left-1/4 w-20 h-20 md:w-32 md:h-32"
+        >
+          <Image
+            src={RedCircle}
+            alt="circle"
+            className="w-full h-full object-cover rounded-full"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 0.8 },
+            scale: { duration: 0.8, delay: 0.8 },
+            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute bottom-32 md:bottom-56 right-8 md:right-72 h-32 w-32 md:w-32 md:h-32"
+        >
+          <Image
+            src={Ascend}
+            alt="ascend"
+            className="w-full h-full"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -10, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.8, delay: 0.8 },
+            scale: { duration: 0.8, delay: 0.8 },
+            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute top-2/4 right-5 md:right-44 w-20 h-20 md:w-32 md:h-32"
+        >
+          <div className="w-10 h-10 rounded-full bg-[#F7004B]"></div>
+        </motion.div>
+      </div>
+
       <motion.div
         variants={fadeInUp}
-        className="text-center max-w-full -mt-20 md:-mt-32"
+        className="text-center max-w-full -mt-20 md:-mt-32 relative z-10"
       >
         
         <motion.span
@@ -111,8 +215,8 @@ export default function WealthHeroSection() {
           </Link>
         </motion.div>
 
-        {/* Background Elements */}
-        <div className="absolute inset-0 z-0 w-dvw h-dvh pointer-events-none overflow-hidden">
+        {/* Background Elements
+        <div className="absolute inset-0 -z-10 w-dvw h-dvh pointer-events-none overflow-hidden">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{
@@ -125,12 +229,12 @@ export default function WealthHeroSection() {
               scale: { duration: 0.8, delay: 0.4 },
               y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute top-36 -z-10 left-[8%] md:left-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
+            className="absolute top-36 left-[8%] md:left-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
           >
             <Image
               src={Growth}
               alt="growth"
-              className="w-full h-full  "
+              className="w-full h-full"
             />
           </motion.div>
 
@@ -146,12 +250,12 @@ export default function WealthHeroSection() {
               scale: { duration: 0.8, delay: 0.4 },
               y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute top-24 -z-10 right-[10%] md:right-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
+            className="absolute top-24 right-[10%] md:right-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
           >
             <Image
               src={Stars}
               alt="stars"
-              className="w-full h-full  "
+              className="w-full h-full"
             />
           </motion.div>
 
@@ -167,7 +271,7 @@ export default function WealthHeroSection() {
               scale: { duration: 0.8, delay: 0.4 },
               y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute bottom-1/4 left-[10%] md:left-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none -z-10"
+            className="absolute bottom-1/4 left-[10%] md:left-1/4 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
           >
             <Image
               src={RedCircle}
@@ -188,12 +292,12 @@ export default function WealthHeroSection() {
               scale: { duration: 0.8, delay: 0.8 },
               y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute bottom-32 md:bottom-56 right-8 md:right-72  h-32 w-32 md:w-32 md:h-32 pointer-events-none -z-10"
+            className="absolute bottom-32 md:bottom-56 right-8 md:right-72 h-32 w-32 md:w-32 md:h-32 pointer-events-none"
           >
             <Image
               src={Ascend}
               alt="ascend"
-              className="w-full h-full "
+              className="w-full h-full"
             />
           </motion.div>
 
@@ -209,12 +313,12 @@ export default function WealthHeroSection() {
               scale: { duration: 0.8, delay: 0.8 },
               y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute top-2/4 right-5 md:right-44 w-20 h-20 md:w-32 md:h-32 pointer-events-none -z-10"
+            className="absolute top-2/4 right-5 md:right-44 w-20 h-20 md:w-32 md:h-32 pointer-events-none"
           >
             <div className="w-10 h-10 rounded-full bg-[#F7004B]"></div>
-          </motion.div>
+          </motion.div> */}
           
-        </div>
+        {/* </div> */}
       </motion.div>
     </motion.section>
   );
