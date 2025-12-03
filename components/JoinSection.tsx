@@ -7,36 +7,42 @@ import { motion } from "framer-motion";
 
 const JoinSection = () => {
   return (
-    <div className="bg-[#19CC85] w-dvw  flex justify-center items-center">
-      <div className="w-9/12 flex justify-between py-10 ">
-        <div className="flex flex-col text-white max-w-lg space-y-6">
+    <div className="bg-[#19CC85] w-full flex justify-center items-center px-4">
+      <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-between items-center py-8 lg:py-10 gap-8 lg:gap-0">
+        <div className="flex flex-col text-white w-full lg:max-w-lg space-y-4 lg:space-y-6 text-center lg:text-left">
           <div className="">
-            <span className="text-6xl">Ready to Elevate</span>
-            <div className="text-6xl flex items-center -mt-3">
-              <span>Your</span>
+            <span className="text-3xl sm:text-4xl lg:text-6xl block lg:inline">Ready to Elevate</span>
+            <div className="text-3xl sm:text-4xl lg:text-6xl flex flex-col sm:flex-row items-center justify-center lg:justify-start -mt-1 lg:-mt-3">
+              <span className="mr-0 sm:mr-2">Your</span>
               <Image
                 src={Lifestyle}
                 alt="Lifestyle"
-                className="inline-block ml-2 h-36 w-48"
+                className="inline-block ml-0 sm:ml-2 h-20 w-28 sm:h-28 sm:w-36 lg:h-36 lg:w-48 mt-2 sm:mt-0"
               />
             </div>
           </div>
-          <span className="text-lg font-body">
+          <span className="text-base lg:text-lg font-body px-4 lg:px-0">
             Join our community and start unlocking experiences that transform
             ordinary moments into extraordinary memories.
           </span>
-          <a href="">
-            <div className="mt-6 max-w-fit bg-transparent  font-bold pr-2 ps-6 text-white py-2 rounded-full border-2 border-white  transition flex gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86]">
-              Join Now
-              <div
-                className="transform rotate-[-45deg] bg-white rounded-full ml-2 p-2 sm:p-3 md:p-4 text-[#1dcb86]"
-              >
-                <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+          <div className="flex justify-center lg:justify-start">
+            <a href="">
+              <div className="mt-4 lg:mt-6 max-w-fit bg-transparent font-bold pr-2 ps-4 lg:ps-6 text-white py-2 rounded-full border-2 border-white transition flex gap-2 lg:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86]">
+                <span className="text-base lg:text-lg">Join Now</span>
+                <div className="transform rotate-[-45deg] bg-white rounded-full ml-1 lg:ml-2 p-2 lg:p-3 xl:p-4 text-[#1dcb86]">
+                  <ArrowRight className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
-        <Image src={JoinImages} alt="Join Images" className="h-full" />
+        <div className="w-full lg:w-auto flex justify-center">
+          <Image 
+            src={JoinImages} 
+            alt="Join Images" 
+            className="h-auto w-full max-w-sm lg:max-w-none lg:h-full object-contain" 
+          />
+        </div>
       </div>
     </div>
   );

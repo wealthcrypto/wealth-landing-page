@@ -13,34 +13,34 @@ const DistributionSection: React.FC = () => {
   const items = [
     {
       id: 1,
-      title: "Community & Experiences",
-      amount: "400M WEALTH",
-      desc: "Dedicated to community rewards, experience access, and member benefits",
-      percent: 72,
+      title: "Private Sale & Presale",
+      amount: "540K WEALTH",
+      desc: "A strategic allocation for early supporters who believe in the foundation of the WEALTH ecosystem.",
+      percent: 60,
       icon: Community,
     },
     {
       id: 2,
-      title: "Ecosystem Growth",
-      amount: "400M WEALTH",
-      desc: "Reserved for partnerships, integrations and platform incentives",
-      percent: 55,
+      title: "Exchange Listing",
+      amount: "360K WEALTH",
+      desc: "Reserved to strengthen liquidity and ensure smooth market access when WEALTH enters exchanges.",
+      percent: 30,
       icon: Grow,
     },
     {
       id: 3,
-      title: "Security & Reserves",
-      amount: "400M WEALTH",
-      desc: "Held for protocol security, audits and long-term stability",
-      percent: 44,
+      title: "Marketing & Operations",
+      amount: "270K WEALTH",
+      desc: "Allocated to expand reach, grow our presence, and support key operational needs.",
+      percent: 40,
       icon: Shield,
     },
     {
       id: 4,
-      title: "Team & Advisors",
-      amount: "400M WEALTH",
-      desc: "Token allocation for founders, contributors and advisors",
-      percent: 26,
+      title: "Team & Reserve",
+      amount: "630K WEALTH",
+      desc: "Dedicated to the builders behind the ecosystem and the long-term reserve ensuring continuity.",
+      percent: 20,
       icon: Team,
     },
   ];
@@ -55,8 +55,10 @@ const DistributionSection: React.FC = () => {
           </div>
           <LineSpringRed className="absolute -right-10 md:-right-20 -top-20 md:-top-42 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
         </div>
-        <p className="text-gray-600 text-sm md:text-base mt-4 max-w-md mx-auto md:mx-0 md:ml-auto">
-          Transparent allocation focused on community value and long-term sustainability.
+        <p className="text-gray-600 text-sm md:text-base mt-4 max-w-full mx-auto md:mx-0 md:ml-auto">
+          Total supply : 1.800.000 WEALTH
+          <br />
+          Our token distribution follows a simple principle: fairness, sustainability, and long-term commitment. Each bucket is crafted to support liquidity, strengthen the ecosystem, reward participation, and empower the people building WEALTH from day one.
         </p>
       </div>
 
@@ -67,7 +69,7 @@ const DistributionSection: React.FC = () => {
         <LineSpringRed className="absolute -right-10 md:-right-20 bottom-6 md:bottom-12 w-20 h-20 md:w-32 md:h-32 pointer-events-none select-none z-0" />
         
         {items.map((it) => (
-          <article key={it.id} className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center bg-[#8ee6c8] p-6 md:p-8 lg:p-12 rounded-2xl shadow-lg z-10 relative">
+          <article key={it.id} className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center bg-[#8ee6c8] p-3 md:p-4 lg:p-6 rounded-3xl shadow-2xl z-10 relative my-6">
             <div className="min-w-[48px] md:min-w-[64px] min-h-[48px] md:min-h-[64px] rounded-full bg-[#00b37a] flex items-center justify-center shadow-inner mx-auto sm:mx-0">
               <Image
                 src={it.icon}
@@ -89,7 +91,6 @@ const DistributionSection: React.FC = () => {
                   style={{ width: `${it.percent}%` }}
                 />
               </div>
-              <p className="text-xs md:text-sm text-green-800 font-semibold">{it.percent}% of total supply</p>
             </div>
           </article>
         ))}

@@ -12,6 +12,15 @@ import { motion } from "framer-motion";
 import GrowthPink from "./icons/GrowhPink";
 import LineSpringGreen from "./icons/LineSpringGreen";
 
+interface JourneyItem {
+  id: number;
+  title: string;
+  description: string;
+  quarter: string;
+  status: "done" | "active" | "planned";
+  features: string[];
+}
+
 const JourneySection = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -26,6 +35,104 @@ const JourneySection = () => {
         staggerChildren: 0.3,
       },
     },
+  };
+
+  const journeyData: JourneyItem[] = [
+    {
+      id: 1,
+      title: "Launch & Audit",
+      description:
+        "Initial funding rounds, securing token foundation with smart contract audit, and the first CEX listing.",
+      quarter: "Q4 2024",
+      status: "active",
+      features: [
+        "Presale and ICO",
+        "Token listing on Coinstore",
+        "Smart contract audit"
+      ]
+    },
+    {
+      id: 2,
+      title: "Visibility & Development",
+      description:
+        "Visibility on aggregators, product and core brand partner development, and token listings.",
+      quarter: "Q1 2025",
+      status: "done",
+      features: [
+        "Visibility on CMC and CoinGecko",
+        "Token listing on INDODAX",
+        "Brand partner collaboration",
+        "Core product development"
+      ]
+    },
+    {
+      id: 3,
+      title: "Activation & Brand Scaling",
+      description:
+        "Initial product features and pilot events, global campaigns, and token listings.",
+      quarter: "Q2 2025",
+      status: "planned",
+      features: [
+        "Pilot event activation with brand partners",
+        "Initial product features launch",
+        "Campaign in TOKEN2049 Dubai and Singapore",
+        "Token listing on TKO, Reku, and Pintu"
+      ]
+    },
+    {
+      id: 4,
+      title: "Utility & Global Expansion",
+      description:
+        "Further scaling of networks, new use cases, and major listings on global exchanges.",
+      quarter: "Q3 2025",
+      status: "planned",
+      features: [
+        "Brand and partner network expansion",
+        "Use case expansion",
+        "Token listing on global exchanges"
+      ]
+    }
+  ];
+
+  const getStatusConfig = (status: string) => {
+    switch (status) {
+      case "done":
+        return {
+          icon: DoneIcon,
+          bgColor: "bg-green-500",
+          textColor: "text-white",
+          badgeColor: "bg-[#19CC85]",
+          cardColor: "bg-[#D1F5E7]",
+          featureColor: "text-emerald-500"
+        };
+      case "active":
+        return {
+          icon: ActiveIcon,
+          bgColor: "bg-[#F7004B]",
+          textColor: "text-white",
+          badgeColor: "bg-[#F7004B]/50",
+          cardColor: "bg-[#FDCCDB]",
+          featureColor: "text-pink-400"
+        };
+      case "planned":
+        return {
+          icon: PlannedIcon,
+          bgColor: "bg-[#8BDBBB]",
+          textColor: "text-teal-700",
+          badgeColor: "bg-[#8BDBBB]",
+          cardColor: "bg-[#D1F5E7]",
+          featureColor: "text-teal-400"
+        };
+      default:
+        return {
+          icon: PlannedIcon,
+          bgColor: "bg-gray-500",
+          textColor: "text-white",
+          badgeColor: "bg-gray-500",
+          cardColor: "bg-gray-100",
+          featureColor: "text-gray-500"
+        };
+    }
   };
 
   return (
@@ -61,213 +168,45 @@ const JourneySection = () => {
             <div className="absolute md:left-6 left-1/2 top-12 bottom-24 w-0.5 bg-green-200 z-0" />
 
             <div className="space-y-12">
-              {/* Item */}
-              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center relative z-30">
-                {/* Timeline marker */}
-                <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white relative z-20">
-                    <Image src={DoneIcon} alt="Done" />
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">Q1 2025</div>
-                  <div className="text-xs bg-[#19CC85] px-2 rounded-full ">Done</div>
-                </div>
-
-                {/* Card */}
-                <div className="flex-1 bg-[#D1F5E7] rounded-xl p-6 shadow-lg relative z-50 overflow-visible mx-5 md:mx-2 ">
-                  <h3 className="text-xl mb-1">Foundation & Community</h3>
-                  <p className="text-md text-gray-700 mb-4">
-                    Token launch, community building, and initial partnerships
-                    established.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>WEALTH Token Launch</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>Community of 10,000+ members</span>
+              {journeyData.map((item, index) => {
+                const config = getStatusConfig(item.status);
+                
+                return (
+                  <motion.div 
+                    key={item.id}
+                    variants={fadeInUp} 
+                    className="flex flex-col md:flex-row items-center justify-center relative z-30"
+                  >
+                    {/* Timeline marker */}
+                    <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
+                      <div className={`flex items-center justify-center w-16 h-16 rounded-full ${config.bgColor} ${config.textColor} relative z-20`}>
+                        <Image src={config.icon} alt={item.status} />
+                      </div>
+                      <div className="mt-2 text-sm text-gray-600">{item.quarter}</div>
+                      <div className={`text-xs ${config.badgeColor} px-2 rounded-full capitalize`}>
+                        {item.status}
+                      </div>
                     </div>
 
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>Initial partner venues secured</span>
+                    {/* Card */}
+                    <div className={`flex-1 ${config.cardColor} rounded-xl p-6 shadow-md relative z-50 overflow-visible mx-5 md:mx-0`}>
+                      <h3 className="text-xl mb-1">{item.title}</h3>
+                      <p className="text-md text-gray-700 mb-4">
+                        {item.description}
+                      </p>
+
+                      <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
+                        {item.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-start">
+                            <span className={`${config.featureColor} mr-2`}>✳</span>
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>Beta testing platform</span>
-                    </div>
-                  </div>
-
-                  {/* decorative circle - slightly overflowing bottom-right */}
-                  
-                </div>
-              </motion.div>
-
-              {/* Item */}
-              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center relative z-30">
-                <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white relative z-20">
-                    <Image src={DoneIcon} alt="Done" />
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">Q2 2025</div>
-                  <div className="text-xs bg-[#19CC85] px-2 rounded-full ">Done</div>
-                </div>
-
-                <div className="flex-1 bg-[#D1F5E7] rounded-xl p-6 shadow-md relative z-50 overflow-visible mx-5 md:mx-0">
-                  <h3 className="text-xl mb-1">Platform Launch</h3>
-                  <p className="text-md text-gray-700 mb-4">
-                    Full platform rollout with core lifestyle experiences across
-                    major cities.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>Web & mobile platform launch</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>50+ venue partnerships</span>
-                    </div>
-
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>First community events hosted</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-emerald-500 mr-2">✳</span>
-                      <span>Membership tiers introduced</span>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </motion.div>
-
-              {/* Item - Active */}
-              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center relative z-30">
-                <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#F7004B] text-white relative z-20">
-                    <Image src={ActiveIcon} alt="Active" />
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">Q3 2025</div>
-                  <div className="text-xs bg-[#F7004B]/50 px-2 rounded-full ">Active</div>
-                </div>
-
-                <div className="flex-1 bg-[#FDCCDB] rounded-xl p-6 shadow-md relative z-50 overflow-visible mx-5 md:mx-0">
-                  <h3 className="text-xl">Experience Expansion</h3>
-                  <p className="text-md text-gray-700 mb-4">
-                    Scaling experiences across sports, music, and premium dining
-                    categories.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-                    <div className="flex items-start">
-                      <span className="text-pink-400 mr-2">✳</span>
-                      <span>Sports facility partnerships</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-pink-400 mr-2">✳</span>
-                      <span>Music venue collaborations</span>
-                    </div>
-
-                    <div className="flex items-start">
-                      <span className="text-pink-400 mr-2">✳</span>
-                      <span>Premium dining experiences</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-pink-400 mr-2">✳</span>
-                      <span>Member rewards program</span>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </motion.div>
-
-              {/* Item */}
-              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center relative z-30">
-                <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#8BDBBB] text-teal-700 relative z-20">
-                    <Image src={PlannedIcon} alt="Planned" />
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">Q4 2025</div>
-                  <div className="text-xs bg-[#8BDBBB] px-2 rounded-full ">Planned</div>
-                </div>
-
-                <div className="flex-1 bg-[#D1F5E7] rounded-xl p-6 shadow-md relative z-50 overflow-visible mx-5 md:mx-0">
-                  <h3 className="text-xl mb-1">Global Presence</h3>
-                  <p className="text-md text-gray-700 mb-4">
-                    International expansion and exclusive high-end experience
-                    partnerships.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>International city launches</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>Luxury brand partnerships</span>
-                    </div>
-
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>VIP experience tier</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>Member governance launch</span>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </motion.div>
-
-              {/* Item */}
-              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center relative z-30">
-                <div className="w-full md:w-24 flex flex-col items-center relative z-20 mb-4 md:mb-0 md:-ml-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#8BDBBB] text-teal-700 relative z-20">
-                    <Image src={PlannedIcon} alt="Planned" />
-                  </div>
-                  <div className="mt-2 text-sm text-gray-600">Q1 2026</div>
-                  <div className="text-xs bg-[#8BDBBB] px-2 rounded-full ">Planned</div>
-                </div>
-
-                <div className="flex-1 bg-[#D1F5E7] rounded-xl p-6 shadow-md relative z-50 overflow-visible mx-5 md:mx-0">
-                  <h3 className="text-xl mb-1">Innovation Hub</h3>
-                  <p className="text-md text-gray-700 mb-4">
-                    Advanced features, AI-powered recommendations, and lifestyle
-                    analytics.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>AI experience matching</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>Lifestyle analytics dashboard</span>
-                    </div>
-
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>Advanced community features</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-teal-400 mr-2">✳</span>
-                      <span>Partnership marketplace</span>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </motion.div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </motion.div>
@@ -275,7 +214,7 @@ const JourneySection = () => {
       <GrowthPink className="absolute top-16 right-2/4 w-24 h-24 md:w-24 md:h-24 pointer-events-none z-0" />
       <LineSpringGreen className="absolute top-28 left-2/4 w-24 h-24 md:w-32 md:h-32 pointer-events-none z-0" />
 
-      <div className="absolute bottom-0 top-3/4 left-0 right-0 z-0 pointer-events-none">
+      <div className="absolute bottom-0 z-10 pointer-events-none w-full h-1/3 md:h-1/2">
         <Image src={Euforia} alt="Euforia background" fill className="object-cover w-full" />
       </div>
     </motion.div>
