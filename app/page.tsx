@@ -40,10 +40,10 @@ export default function Home() {
         <WealthAboutSection />
       </div>
       
-      <div className="py-8 md:py-16">
+      <div className="pt-8 md:pt-16">
         <JourneySection />
       </div>
-      <div className="py-8 md:py-16">
+      <div className="pb-8 md:pb-16">
         <FutureSection />
       </div>
       {/* <WealthEconomicSection /> */}
@@ -57,14 +57,14 @@ export default function Home() {
         <BuildSection />
       </div>
       
-      {/* <CommunitySection /> */}
+      <CommunitySection />
       <GroupSection />
-      <ReviewSection />
-      <div className="overflow-hidden">
+      {/* <ReviewSection /> */}
+      {/* <div className="overflow-hidden">
         <Image src={FaqSec} alt="FAQ Section" className="w-full -mt-2 md:-mt-5 mb-6 md:mb-10" />
-      </div>
+      </div> */}
       {/* <CommunityAwaits /> */}
-      <FaqSection />
+      {/* <FaqSection /> */}
       <FaqContinue />
       <Footer />
     </main>
