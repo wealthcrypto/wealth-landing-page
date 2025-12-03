@@ -53,7 +53,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden z-50 border-t">
+                <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden z-50 h-screen border-t">
                     <nav className="flex flex-col items-center gap-4 py-4">
                         {[
                             "Home",
@@ -71,7 +71,6 @@ export default function Header() {
                             </a>
                         ))}
                         <div className="flex flex-col items-center gap-4 mt-4">
-                            <button className="text-sm font-medium">Sign In</button>
                             <button className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2">
                                 Contact Us
                                 <div className="-rotate-45 bg-[#1dcb86] rounded-full p-2">
