@@ -179,9 +179,8 @@ export const translations = {
       },
       copyright: "© 2025 WEALTH TOKEN ($WEALTH). All rights reserved.",
       bottomLinks: {
-        privacy: "Privacy",
-        terms: "Terms & Conditions",
-        cookies: "Cookies"
+        privacy: "Privacy Policy",
+        terms: "Terms & Conditions"
       }
     },
     // Common

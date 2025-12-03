@@ -5,6 +5,15 @@
 /* Import fonts for Redis-style typography hierarchy */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+/* Custom font: Reflet des Ombres */
+@font-face {
+  font-family: 'Reflet des Ombres';
+  src: url('/fonts/Reflet des Ombres.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* 
   ═══════════════════════════════════════════════
   🎨 WEALTH TOKEN - PREMIUM LIGHT MODE
@@ -42,9 +51,9 @@
   }
 
   body {
-    @apply bg-wealth-bg text-wealth-navy antialiased;
+    @apply bg-[#FDEFEF] text-wealth-navy antialiased;
     background: linear-gradient(135deg, #FFFFFF 0%, rgba(167, 243, 208, 0.05) 100%);
-    font-family: var(--font-fredoka), sans-serif;
+    font-family: var(--font-varela-round), sans-serif;
     scroll-behavior: smooth;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
@@ -172,31 +181,6 @@
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
   }
 
-  /* 🎨 Doodle style elements */
-  .doodle-border {
-    @apply border-2 border-wealth-navy;
-    border-style: dashed;
-    border-radius: 20px;
-  }
-
-  .doodle-bg {
-    @apply bg-black border-2 border-wealth-navy;
-    border-radius: 16px;
-    position: relative;
-  }
-
-  .doodle-bg::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--navy-ink);
-    border-radius: 18px;
-    z-index: -1;
-    transform: rotate(0.5deg);
-  }
 
   
 
@@ -210,18 +194,6 @@
     @apply font-body text-lg md:text-xl text-wealth-gray-600 leading-relaxed;
   }
 
-  /* 🌟 Premium spacing */
-  .section-padding {
-    @apply py-16 md:py-24;
-  }
-
-  .container-padding {
-    @apply px-4 sm:px-6 lg:px-8;
-  }
-
-  .max-content {
-    @apply max-w-7xl mx-auto;
-  }
 }
 
 /* 🎨 Custom scrollbar for premium feel */

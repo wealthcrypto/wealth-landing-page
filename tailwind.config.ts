@@ -73,8 +73,9 @@ const config: Config = {
       },
       fontFamily: {
         heading: ['var(--font-concert-one)', 'cursive'],
-        body: ['var(--font-fredoka)', 'sans-serif'],
+        body: ['var(--font-varela-round)', 'sans-serif'],
         accent: ['var(--font-delius)', 'cursive'],
+        reflet: ['Reflet des Ombres', 'cursive'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',

@@ -1,202 +1,295 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Twitter, Send, Github, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Heart } from "lucide-react";
 import { slideUp, rotateContinuous } from "@/lib/animations";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Image from "next/image";
+import Connected from "@/public/assets/Connected.svg";
+import Logo from "@/public/assets/Logo.svg";
+import { FaDiscord, FaTelegram, FaTelegramPlane } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
 
-/* 
-  ═══════════════════════════════════════════════
-  🦶 FOOTER COMPONENT
-  Features:
-  - Fade-in from bottom with delay
-  - Rotating Ethereum icon (continuous loop)
-  - Social media links with hover effects
-  - Newsletter subscription form
-  - Copyright and legal links
-  ═══════════════════════════════════════════════
+import Ascend from "@/public/Ascend.svg";
+import Circle from "@/public/Circle.svg";
+import Growth from "@/public/Growth.svg";
+import Stars from "@/public/Stars.svg";
+
+/*
+  Updated Footer to match provided design:
+  - Top links row (Experience / Learn / Community / Support)
+  - Large "Stay connected" hero with newsletter input and rounded subscribe button
+  - Decorative shapes / subtle background
+  - Bottom bar with social icons and legal links
 */
 
 const socialLinks = [
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Send, label: "Telegram", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: MessageCircle, label: "Discord", href: "#" },
+  { icon: FaDiscord, label: "Discord", href: "https://discord.gg/K2kBy5Nr" },
+  {
+    icon: FaTelegramPlane,
+    label: "Telegram",
+    href: "https://t.me/thewealthcrypto",
+  },
+  { icon: FaTwitter, label: "Twitter", href: "https://x.com/thewealthcrypto" },
 ];
 
 export default function Footer() {
   const { t } = useLanguage();
-  
-  const footerLinks = {
-    [t.footer.links.product.title]: t.footer.links.product.items,
-    [t.footer.links.exchanges.title]: t.footer.links.exchanges.items,
-    [t.footer.links.company.title]: t.footer.links.company.items,
-    [t.footer.links.legal.title]: t.footer.links.legal.items,
+
+  // Fallback safe accesses in case translations don't have exact keys
+  const footer = t?.footer ?? {
+    links: {},
+    description: "Connecting you to premium lifestyle experiences.",
+    newsletter: {
+      title: "Stay connected",
+      subtitle:
+        "Get exclusive updates, early access to experiences, and community highlights.",
+      placeholder: "Enter Your Email",
+      button: "Subscribe",
+    },
+    copyright: "© 2025 WEALTH Token. All rights reserved.",
+    bottomLinks: {
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      cookies: "Cookies",
+    },
   };
+
+  // Flatten possible link groups used in the design image
+  const linkGroups = [
+    {
+      title: "Experience",
+      items: [
+        { name: "Sports", href: "#sports" },
+        { name: "Music & Events", href: "#music-events" },
+        { name: "Food & Beverage", href: "#food-beverage" },
+        { name: "Community Meetups", href: "#community-meetups" },
+      ],
+    },
+    {
+      title: "Learn",
+      items: [
+        { name: "What is WEALTH?", href: "#what-is-wealth" },
+        { name: "How It Works", href: "#how-it-works" },
+        { name: "Tokenomics", href: "#tokenomics" },
+        { name: "Roadmap", href: "#roadmap" },
+      ],
+    },
+    {
+      title: "Community",
+      items: [
+        { name: "Discord", href: "https://discord.gg/K2kBy5Nr" },
+        { name: "Telegram", href: "https://t.me/thewealthcrypto" },
+        {
+          name: "Telegram Community",
+          href: "https://t.me/thewealthcrypto_community",
+        },
+        { name: "Twitter", href: "https://x.com/thewealthcrypto" },
+        {
+          name: "Instagram",
+          href: "https://www.instagram.com/thewealthcrypto/",
+        },
+      ],
+    },
+    {
+      title: "Support",
+      items: [
+        { name: "FAQ", href: "#faq" },
+        { name: "Help Center", href: "#help-center" },
+        { name: "Contact Us", href: "#contact-us" },
+        { name: "Partner with Us", href: "#partner-with-us" },
+      ],
+    },
+  ];
+
   return (
-    <footer className="relative bg-background-primary border-t border-background-secondary">
-      {/* 🎨 Background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-green-electric rounded-full blur-[150px]" />
+    <footer className="relative border-t border-green-100 overflow-hidden">
+      {/* subtle decorative shapes */}
+      <div className="absolute left-0 top-0 -translate-y-10 opacity-10 pointer-events-none">
+        <div className="w-96 h-96 bg-green-200 rounded-full blur-[140px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
-          {/* 🏢 Brand column */}
-          <motion.div
-            className="lg:col-span-2"
-            variants={slideUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* 💫 Logo with rotating icon */}
-            <div className="flex items-center gap-4 mb-6">
-              <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-green-electric to-green-dark rounded-xl flex items-center justify-center shadow-lg overflow-hidden glow-green"
-                {...rotateContinuous}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+        {/* Top simple brand + email (left) and link groups (center/right) */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-12">
+          <div className="flex-1 flex items-start gap-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div className="space-y-4">
+              <Image src={Logo} alt="WEALTH Logo" className="" />
+              <p className="text-sm text-[#0b4f3b]/80 max-w-xs leading-relaxed">
+                {footer.description}
+              </p>
+              <a
+                href="mailto:hi@wealthcrypto.fund"
+                className="inline-flex items-center gap-3 bg-[#00b67a] text-white pl-4 pr-1 py-1 rounded-full shadow-md font-semibold hover:bg-[#019f68] transition"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src="/logo-trans.png" 
-                  alt="WEALTH TOKEN Logo" 
-                  className="w-10 h-10 object-contain"
-                  onError={(e) => {
-                    // Fallback jika logo belum ada
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<span class="text-2xl font-heading font-bold text-background-primary">W</span>';
-                  }}
-                />
+                hi@wealthcrypto.fund
+                <div className="bg-white p-4 rounded-full">
+                  <ArrowUpRight className="w-3 h-3 text-[#00b67a]" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full">
+            {linkGroups.map((group) => (
+              <motion.div
+                key={group.title}
+                variants={slideUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="min-w-0"
+              >
+                <h4 className="text-sm font-heading bg-[#19CC85] text-white rounded-2xl px-3 py-1 mb-3">
+                  {group.title}
+                </h4>
+                <ul className="space-y-2">
+                  {group.items.map((item: any) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm text-[#07563f]/80 hover:text-[#00b67a] transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
-              <span className="text-2xl font-heading font-bold text-text-primary">WEALTH TOKEN</span>
-            </div>
-
-            <p className="text-text-secondary leading-relaxed mb-6">
-              {t.footer.description}
-            </p>
-
-            {/* 🔗 Social links */}
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 glass hover:bg-green-electric/20 rounded-lg flex items-center justify-center transition-all group"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-5 h-5 text-text-muted group-hover:text-green-electric transition-colors" />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* 📚 Footer links columns */}
-          {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
-            <motion.div
-              key={category}
-              variants={slideUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: categoryIndex * 0.1 }}
-            >
-              <h4 className="text-text-primary font-heading font-bold mb-4 text-lg">{category}</h4>
-              <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <motion.a
-                      href="#"
-                      className="text-text-muted hover:text-green-electric transition-colors text-sm"
-                      whileHover={{ x: 4 }}
-                    >
-                      {link}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* 📧 Newsletter section */}
+        {/* Divider */}
+        <div className="flex items-center justify-center my-10">
+          <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+        </div>
+
+        {/* Stay connected hero */}
         <motion.div
-          className="border-t border-background-secondary pt-12 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center my-24 relative"
+          variants={slideUp}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
         >
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-heading font-bold text-text-primary mb-4">
-              {t.footer.newsletter.title}
-            </h3>
-            <p className="text-text-secondary mb-6">
-              {t.footer.newsletter.subtitle}
-            </p>
-
-            {/* 📝 Subscription form */}
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <motion.input
-                type="email"
-                placeholder={t.footer.newsletter.placeholder}
-                className="flex-1 px-6 py-3 bg-background-secondary border border-background-secondary text-text-primary placeholder:text-text-muted focus:outline-none focus:border-green-electric focus:ring-2 focus:ring-green-electric/50 transition-all rounded-xl"
-                whileFocus={{ scale: 1.02 }}
-              />
-              <motion.button
-                type="submit"
-                className="btn-primary !bg-[var(--green-wealth)] !text-white px-8 py-3 font-heading font-semibold rounded-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t.footer.newsletter.button}
-              </motion.button>
-            </form>
-
-            {/* Error message example */}
-            <p className="text-error text-xs mt-2 opacity-0 hidden" id="newsletter-error">
-              Please enter a valid email address
-            </p>
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-4xl md:text-5xl font-body text-[#063b2e]">
+              Stay
+            </span>
+            <Image
+              src={Connected}
+              alt="Connected"
+              className="h-16 md:h-20 w-auto"
+            />
           </div>
-        </motion.div>
 
-        {/* ⚖️ Bottom bar */}
-        <motion.div
-          className="border-t border-background-secondary pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-        >
-          <p className="text-text-muted text-sm">
-            {t.footer.copyright}
+          <p className="mt-4 text-[#064235]/80 max-w-2xl mx-auto">
+            Get exclusive updates, early access to experiences, and community highlights.
           </p>
 
-          <div className="flex gap-6 text-sm">
-            <motion.a
-              href="#"
-              className="text-text-muted hover:text-green-electric transition-colors"
-              whileHover={{ y: -2 }}
+          <form className="mt-8 flex items-center justify-center gap-4 max-w-2xl mx-auto">
+            <input
+              type="email"
+              placeholder={footer.newsletter?.placeholder}
+              aria-label="Email"
+              className="flex-1 min-w-0 px-6 py-3 rounded-full bg-white border border-green-100 shadow-sm z-10 placeholder:text-[#94cdb6] text-[#063b2e] focus:outline-none focus:ring-2 focus:ring-[#00b67a]/30"
+            />
+            <button
+              type="submit"
+              className="inline-flex items-center gap-3 bg-[#00b67a] text-white pl-4 pr-1 py-1 rounded-full shadow-md font-semibold"
             >
-              {t.footer.bottomLinks.privacy}
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-text-muted hover:text-green-electric transition-colors"
-              whileHover={{ y: -2 }}
+              <span>{footer.newsletter?.button}</span>
+              <div className="bg-white p-4 rounded-full">
+                <ArrowUpRight className="w-3 h-3 text-[#00b67a]" />
+              </div>
+            </button>
+          </form>
+
+          {/* Images Abs */}
+          {/* Decorative absolute images (decorative only - aria-hidden) */}
+          <div className="pointer-events-none -z-10">
+            <motion.div
+              variants={rotateContinuous}
+              initial="hidden"
+              animate="visible"
+              className="absolute -top-12 left-16 w-20 opacity-80"
+              aria-hidden="true"
             >
-              {t.footer.bottomLinks.terms}
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-text-muted hover:text-green-electric transition-colors"
-              whileHover={{ y: -2 }}
+              <Image src={Stars} alt="" className="w-full h-auto" />
+
+            </motion.div>
+
+            <motion.div
+              variants={rotateContinuous}
+              initial="hidden"
+              animate="visible"
+              className="absolute -top-8 right-6 w-20 opacity-60"
+              aria-hidden="true"
             >
-              {t.footer.bottomLinks.cookies}
-            </motion.a>
+              <Image src={Growth} alt="" className="w-full h-auto" />
+
+            </motion.div>
+
+            <div
+              className="absolute left-1/4 bottom-8 w-16 opacity-70"
+              aria-hidden="true"
+            >
+              <Image src={Circle} alt="" className="w-full h-auto" />
+
+            </div>
+
+            <div
+              className="absolute right-32 bottom-6 w-16 opacity-60"
+              aria-hidden="true"
+            >
+              <Image src={Ascend} alt="" className="w-full h-auto" />
+
+            </div>
           </div>
         </motion.div>
+        {/* Divider */}
+        <div className="flex items-center justify-center my-10">
+          <div className="h-[1px] w-3/4 bg-[#19CC85]" />
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-green-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 text-sm text-[#07563f]/80">
+            <span>{footer.copyright}</span>
+            <span className="hidden md:inline">• Built with</span>
+            <Heart className="w-4 h-4 text-pink-500" />
+            <span className="hidden md:inline">for the community.</span>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <div className="flex gap-3">
+              {socialLinks.map((s, i) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={i}
+                    href={s.href}
+                    aria-label={s.label}
+                    className="w-9 h-9 border border-[#19CC85] rounded-full flex items-center justify-center text-[#19CC85]/90 shadow-sm hover:bg-[#e6fff5] transition"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
+
+            <div className="flex gap-4 text-sm text-[#07563f]/80">
+              <a href="#" className="hover:text-[#00b67a] transition">
+                {footer.bottomLinks?.privacy}
+              </a>
+              <a href="#" className="hover:text-[#00b67a] transition">
+                {footer.bottomLinks?.terms}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
