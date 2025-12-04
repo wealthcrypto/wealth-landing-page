@@ -19,15 +19,23 @@ export default function Header() {
                 {[
                     "Home",
                     "Whitepaper",
-                ].map((link) => (
-                    <a
-                        key={link}
-                        href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="px-4 py-1 border rounded-full border-black text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-                    >
-                        {link}
-                    </a>
-                ))}
+                ].map((link) => {
+                    const isExternal = link === "Whitepaper";
+                    const href = isExternal
+                        ? "https://wealth-token.gitbook.io/wealth-token-docs/"
+                        : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
+
+                    return (
+                        <a
+                            key={link}
+                            href={href}
+                            className="px-4 py-1 border rounded-full border-black text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+                            {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        >
+                            {link}
+                        </a>
+                    );
+                })}
             </nav>
 
             {/* Action Buttons - Hidden on mobile, shown on md+ */}
@@ -56,16 +64,24 @@ export default function Header() {
                         {[
                             "Home",
                             "Whitepaper",
-                        ].map((link) => (
-                            <a
-                                key={link}
-                                href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                                className="px-4 py-2 border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {link}
-                            </a>
-                        ))}
+                        ].map((link) => {
+                            const isExternal = link === "Whitepaper";
+                            const href = isExternal
+                                ? "https://wealth-token.gitbook.io/wealth-token-docs/"
+                                : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
+
+                            return (
+                                <a
+                                    key={link}
+                                    href={href}
+                                    className="px-4 py-2 border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                                >
+                                    {link}
+                                </a>
+                            );
+                        })}
                         <div className="flex flex-col items-center gap-4 mt-4">
                             <button className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2">
                                 Contact Us
