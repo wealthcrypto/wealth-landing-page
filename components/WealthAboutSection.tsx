@@ -24,7 +24,7 @@ const WealthAboutSection = () => {
             </div>
             <div className="w-full sm:w-5/6 md:w-4/5 lg:w-3/5 space-y-4 sm:space-y-6 text-wealth-navy text-sm sm:text-base md:text-lg font-body leading-relaxed">
               <span className="block">
-                WEALTH Token ($WEALTH) transforms your everyday activities - from your favorite cafe visits to crucial event tickets - from simple expenditures into tangible, digital assets. It connects your favorite places and communities into one seamless, rewarding experience. WEALTH operates as an ERC-20 utility token on the Ethereum blockchain, giving you a secure, verifiable way to build wealth just by living the life you love.
+                WealthCrypto ($WEALTH) transforms your everyday activities - from your favorite cafe visits to crucial event tickets - from simple expenditures into tangible, digital assets. It connects your favorite places and communities into one seamless, rewarding experience. $WEALTH operates as an ERC-20 utility token on the Ethereum blockchain, giving you a secure, verifiable way to build wealth just by living the life you love.
               </span>
             </div>
           </div>

@@ -72,7 +72,7 @@ const CommunitySection = () => {
             />
           </div>
           <p className="w-full lg:w-3/4 font-body text-sm sm:text-base text-center lg:text-end px-4 lg:px-0">
-            The value of WEALTH extends far beyond the digital wallet; it is
+            The value of $WEALTH extends far beyond the digital wallet; it is
             defined by the strength and accessibility of its global community.
             <br className="hidden lg:block" />
             We are building the largest, most active decentralized social

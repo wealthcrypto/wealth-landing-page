@@ -31,7 +31,7 @@ const FutureSection = () => {
           </div>
           
           <p className="text-sm sm:text-base md:text-lg font-body max-w-md sm:max-w-lg mx-auto leading-relaxed">
-            Community is at the heart of WEALTH. Connect with us and collectively build the future of WEALTH today.
+            Community is at the heart of $WEALTH. Connect with us and collectively build the future of $WEALTH today.
           </p>
           
           <div className="flex justify-center pt-2 md:pt-4">

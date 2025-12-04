@@ -152,7 +152,7 @@ export const translations = {
     },
     // Footer Section
     footer: {
-      description: "WEALTH TOKEN ($WEALTH) - Trusted crypto token listed on Indodax and Indonesian exchanges. Safe, easy, and profitable investment for your digital future.",
+      description: "Connecting you to premium lifestyle experiences across sports, music, dining, and community. Join thousands who are already living exceptionally.",
       links: {
         product: {
           title: "Product",
@@ -177,7 +177,7 @@ export const translations = {
         placeholder: "Enter your email",
         button: "Subscribe"
       },
-      copyright: "© 2025 WEALTH TOKEN ($WEALTH). All rights reserved.",
+      copyright: "© 2025 WealthCrypto ($WEALTH). All rights reserved.",
       bottomLinks: {
         privacy: "Privacy Policy",
         terms: "Terms & Conditions"
