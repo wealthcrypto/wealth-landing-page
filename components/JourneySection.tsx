@@ -43,7 +43,7 @@ const JourneySection = () => {
       title: "Launch & Audit",
       description:
         "Initial funding rounds, securing token foundation with smart contract audit, and the first CEX listing.",
-      quarter: "Q4 2024",
+      quarter: "Q4 2025",
       status: "active",
       features: [
         "Presale and ICO",
@@ -56,7 +56,7 @@ const JourneySection = () => {
       title: "Visibility & Development",
       description:
         "Visibility on aggregators, product and core brand partner development, and token listings.",
-      quarter: "Q1 2025",
+      quarter: "Q1 2026",
       status: "done",
       features: [
         "Visibility on CMC and CoinGecko",
@@ -70,7 +70,7 @@ const JourneySection = () => {
       title: "Activation & Brand Scaling",
       description:
         "Initial product features and pilot events, global campaigns, and token listings.",
-      quarter: "Q2 2025",
+      quarter: "Q2 2026",
       status: "planned",
       features: [
         "Pilot event activation with brand partners",
@@ -84,7 +84,7 @@ const JourneySection = () => {
       title: "Utility & Global Expansion",
       description:
         "Further scaling of networks, new use cases, and major listings on global exchanges.",
-      quarter: "Q3 2025",
+      quarter: "Q3 2026",
       status: "planned",
       features: [
         "Brand and partner network expansion",
