@@ -21,12 +21,11 @@ const GroupSection = () => {
         />
         <div className="relative z-10 p-4 md:p-6 pt-28 md:pt-32 lg:pt-40 flex flex-col">
           <span className="text-2xl md:text-3xl font-semibold">Discord</span>
-          <span className="text-lg md:text-xl mb-2">8,500+ members</span>
           <span className="text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
             Join daily discussions, get exclusive updates, and connect with
             fellow WEALTH members
           </span>
-          <a href="" className="inline-block w-fit">
+          <a href="https://discord.gg/K2kBy5Nr" target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
             <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-white py-2 md:py-2 rounded-full border-2 border-white transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86] group">
               <span className="text-sm md:text-base">Join Us</span>
               <div className="transform rotate-[-45deg] bg-white rounded-full p-2 md:p-3 lg:p-4 text-[#1dcb86] group-hover:bg-[#1dcb86] group-hover:text-white transition-colors">
@@ -44,12 +43,11 @@ const GroupSection = () => {
         />
         <div className="relative z-10 p-4 md:p-6 pt-28 md:pt-32 lg:pt-40 flex flex-col">
           <span className="text-2xl md:text-3xl font-semibold">Telegram</span>
-          <span className="text-lg md:text-xl mb-2">12,000+ members</span>
           <span className="text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
             Get instant updates, participate in community polls, and stay
             connected on the go
           </span>
-          <a href="" className="inline-block w-fit">
+          <a href="https://t.me/thewealthcrypto_community" className="inline-block w-fit">
             <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-black py-2 md:py-2 rounded-full border-2 border-black transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86] group">
               <span className="text-sm md:text-base">Join Us</span>
               <div className="transform rotate-[-45deg] bg-[#F95A8A] rounded-full p-2 md:p-3 lg:p-4 text-white group-hover:bg-white group-hover:text-[#1dcb86] transition-colors">
