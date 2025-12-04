@@ -80,13 +80,13 @@ const PresaleEndedPage = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-wealth-gray-600 max-w-2xl mx-auto mb-8">
-            Thank you for being part of the WEALTH Token journey. Our presale has successfully ended, 
+            Thank you for being part of the WealthCrypto journey. Our presale has successfully ended, 
             and we&apos;re excited to move forward to the next phase.
           </p>
 
           <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full border-2 border-[#1dcb86] text-[#1dcb86] font-medium">
             <div className="w-3 h-3 bg-[#1dcb86] rounded-full animate-pulse"></div>
-            Presale Ended - December 4, 2025
+            Presale Ended - December 5, 2025
           </div>
         </motion.div>
 
@@ -143,7 +143,7 @@ const PresaleEndedPage = () => {
                 Exchange Listing
               </h3>
               <p className="text-wealth-gray-600">
-                WEALTH Token will be listed on major exchanges for public trading.
+                WealthCrypto will be listed on major exchanges for public trading.
               </p>
             </div>
 
@@ -155,7 +155,7 @@ const PresaleEndedPage = () => {
                 Platform Launch
               </h3>
               <p className="text-wealth-gray-600">
-                Launch of the WEALTH ecosystem with sports, music, and lifestyle features.
+                Launch of the $WEALTH ecosystem with sports, music, and lifestyle features.
               </p>
             </div>
           </div>

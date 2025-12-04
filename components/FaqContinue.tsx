@@ -24,7 +24,7 @@ const FaqContinue = () => {
           </div>
           
           <span className="text-base lg:text-lg font-body px-4 lg:px-0 leading-relaxed">
-            Our friendly community team is here to help! Get personalized support and connect with experienced WEALTH members who can guide you.
+            Our friendly community team is here to help! Get personalized support and connect with experienced $WEALTH members who can guide you.
           </span>
           
           <div className="flex justify-center lg:justify-start">

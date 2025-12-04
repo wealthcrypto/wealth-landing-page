@@ -22,9 +22,9 @@ export default function Header() {
                 ].map((link) => {
                     const isExternal = link === "Whitepaper";
                     const href = isExternal
-                        ? "https://wealth-token.gitbook.io/wealth-token-docs/"
+                        ? "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/"
                         : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
-
+                        
                     return (
                         <a
                             key={link}
@@ -67,7 +67,7 @@ export default function Header() {
                         ].map((link) => {
                             const isExternal = link === "Whitepaper";
                             const href = isExternal
-                                ? "https://wealth-token.gitbook.io/wealth-token-docs/"
+                                ? "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/"
                                 : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
 
                             return (

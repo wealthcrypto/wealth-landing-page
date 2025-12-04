@@ -34,7 +34,7 @@ const BuildSection = () => {
       </div>
 
       <span className="text-black font-body text-sm md:text-base lg:text-lg mt-4 block w-full md:w-3/4 lg:w-1/2 text-center mx-auto z-20 px-4">
-        WEALTH Token isn&apos;t designed for quick flips or speculation.
+        WealthCrypto isn&apos;t designed for quick flips or speculation.
         It&apos;s built to grow in value as our community and ecosystem expand,
         creating sustainable value for everyone involved.
       </span>

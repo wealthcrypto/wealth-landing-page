@@ -47,7 +47,7 @@ export default function Footer() {
       placeholder: "Enter Your Email",
       button: "Subscribe",
     },
-    copyright: "© 2025 WEALTH Token. All rights reserved.",
+    copyright: "© 2025 WealthCrypto. All rights reserved.",
     bottomLinks: {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
@@ -69,10 +69,10 @@ export default function Footer() {
     {
       title: "Learn",
       items: [
-        { name: "What is WEALTH?", href: "https://wealth-token.gitbook.io/wealth-token-docs/introduction/what-is-wealth-crypto" },
-        { name: "How It Works", href: "https://wealth-token.gitbook.io/wealth-token-docs/wealth-ecosystem-and-utility/proof-of-experience-pox-mechanism" },
-        { name: "Tokenomics", href: "https://wealth-token.gitbook.io/wealth-token-docs/tokenomics" },
-        { name: "Roadmap", href: "https://wealth-token.gitbook.io/wealth-token-docs/technical-architecture/product-roadmap" },
+        { name: "What is WEALTH?", href: "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/introduction/what-is-wealth-crypto" },
+        { name: "How It Works", href: "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/wealth-ecosystem-and-utility/proof-of-experience-pox-mechanism" },
+        { name: "Tokenomics", href: "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/tokenomics" },
+        { name: "Roadmap", href: "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/technical-architecture/product-roadmap" },
       ],
     },
     {
@@ -281,10 +281,10 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-4 text-sm text-[#07563f]/80">
-              <a href="https://wealth-token.gitbook.io/wealth-token-docs/legal-and-compliance/privacy-policy" className="hover:text-[#00b67a] transition">
+              <a href="https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/legal-and-compliance/privacy-policy" className="hover:text-[#00b67a] transition">
                 {footer.bottomLinks?.privacy}
               </a>
-              <a href="https://wealth-token.gitbook.io/wealth-token-docs/legal-and-compliance/terms-of-use" className="hover:text-[#00b67a] transition">
+              <a href="https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/legal-and-compliance/terms-of-use" className="hover:text-[#00b67a] transition">
                 {footer.bottomLinks?.terms}
               </a>
             </div>

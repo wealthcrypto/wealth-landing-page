@@ -22,8 +22,9 @@ const JoinSection = () => {
             </div>
           </div>
           <span className="text-base lg:text-lg font-body px-4 lg:px-0">
-            Join our community and start unlocking experiences that transform
-            ordinary moments into extraordinary memories.
+            Stop just living — start earning your future.
+            <br/>
+            Join the live-to-Earn movement today.
           </span>
           <div className="flex justify-center lg:justify-start">
             <a href="">

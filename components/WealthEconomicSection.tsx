@@ -18,7 +18,7 @@ const WealthEconomicSection = () => {
             </div>
             <div className="max-w-xl space-y-6 text-wealth-navy text-lg font-body">
               <span>
-                WEALTH Token economics are designed for sustainability and community growth. Every token has a purpose in building the lifestyle ecosystem we&apos;re creating together.
+                WealthCrypto economics are designed for sustainability and community growth. Every token has a purpose in building the lifestyle ecosystem we&apos;re creating together.
               </span>
             </div>
             <div className="flex justify-center">
