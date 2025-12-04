@@ -10,7 +10,7 @@ const BuildSection = () => {
   const data = [
     "Utility Driven Demand",
     "Loyalty Fueled Perks",
-    "Deflationary Pressure",
+    "Community Based",
     "Future-Proof Blockchain Foundation",
   ];
   return (

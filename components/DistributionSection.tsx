@@ -16,7 +16,7 @@ const DistributionSection: React.FC = () => {
       title: "Private Sale & Presale",
       amount: "540K WEALTH",
       desc: "A strategic allocation for early supporters who believe in the foundation of the WEALTH ecosystem.",
-      percent: 60,
+      percent: 30,
       icon: Community,
     },
     {
@@ -24,7 +24,7 @@ const DistributionSection: React.FC = () => {
       title: "Exchange Listing",
       amount: "360K WEALTH",
       desc: "Reserved to strengthen liquidity and ensure smooth market access when WEALTH enters exchanges.",
-      percent: 30,
+      percent: 20,
       icon: Grow,
     },
     {
@@ -32,7 +32,7 @@ const DistributionSection: React.FC = () => {
       title: "Marketing & Operations",
       amount: "270K WEALTH",
       desc: "Allocated to expand reach, grow our presence, and support key operational needs.",
-      percent: 40,
+      percent: 15,
       icon: Shield,
     },
     {
@@ -40,7 +40,7 @@ const DistributionSection: React.FC = () => {
       title: "Team & Reserve",
       amount: "630K WEALTH",
       desc: "Dedicated to the builders behind the ecosystem and the long-term reserve ensuring continuity.",
-      percent: 20,
+      percent: 35,
       icon: Team,
     },
   ];

@@ -25,7 +25,7 @@ const GroupSection = () => {
             Join daily discussions, get exclusive updates, and connect with
             fellow WEALTH members
           </span>
-          <a href="https://discord.gg/K2kBy5Nr" target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
+          <a href="https://discord.gg/yhvExNh7PK" target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
             <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-white py-2 md:py-2 rounded-full border-2 border-white transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86] group">
               <span className="text-sm md:text-base">Join Us</span>
               <div className="transform rotate-[-45deg] bg-white rounded-full p-2 md:p-3 lg:p-4 text-[#1dcb86] group-hover:bg-[#1dcb86] group-hover:text-white transition-colors">
