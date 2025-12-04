@@ -28,7 +28,7 @@ const FaqContinue = () => {
           </span>
           
           <div className="flex justify-center lg:justify-start">
-            <a href="" className="inline-block">
+            <a href="mailto:hi@wealthcrypto.fund" className="inline-block">
               <div className="mt-4 lg:mt-6 bg-transparent font-bold pr-2 pl-4 lg:pl-6 text-white py-2 lg:py-2 rounded-full border-2 border-white transition flex gap-2 lg:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86] group">
                 <span className="text-sm lg:text-base">Contact Us</span>
                 <div className="transform rotate-[-45deg] bg-white rounded-full p-2 lg:p-3 xl:p-4 text-[#1dcb86] group-hover:bg-[#1dcb86] group-hover:text-white transition-colors">

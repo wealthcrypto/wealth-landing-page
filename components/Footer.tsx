@@ -24,7 +24,7 @@ import Stars from "@/public/Stars.svg";
 */
 
 const socialLinks = [
-  { icon: FaDiscord, label: "Discord", href: "https://discord.gg/K2kBy5Nr" },
+  { icon: FaDiscord, label: "Discord", href: "https://discord.gg/yhvExNh7PK" },
   {
     icon: FaTelegramPlane,
     label: "Telegram",
@@ -57,28 +57,28 @@ export default function Footer() {
 
   // Flatten possible link groups used in the design image
   const linkGroups = [
-    {
-      title: "Experience",
-      items: [
-        { name: "Sports", href: "#sports" },
-        { name: "Music & Events", href: "#music-events" },
-        { name: "Food & Beverage", href: "#food-beverage" },
-        { name: "Community Meetups", href: "#community-meetups" },
-      ],
-    },
+    // {
+    //   title: "Experience",
+    //   items: [
+    //     { name: "Sports", href: "#sports" },
+    //     { name: "Music & Events", href: "#music-events" },
+    //     { name: "Food & Beverage", href: "#food-beverage" },
+    //     { name: "Community Meetups", href: "#community-meetups" },
+    //   ],
+    // },
     {
       title: "Learn",
       items: [
-        { name: "What is WEALTH?", href: "#what-is-wealth" },
-        { name: "How It Works", href: "#how-it-works" },
-        { name: "Tokenomics", href: "#tokenomics" },
-        { name: "Roadmap", href: "#roadmap" },
+        { name: "What is WEALTH?", href: "https://wealth-token.gitbook.io/wealth-token-docs/introduction/what-is-wealth-crypto" },
+        { name: "How It Works", href: "https://wealth-token.gitbook.io/wealth-token-docs/wealth-ecosystem-and-utility/proof-of-experience-pox-mechanism" },
+        { name: "Tokenomics", href: "https://wealth-token.gitbook.io/wealth-token-docs/tokenomics" },
+        { name: "Roadmap", href: "https://wealth-token.gitbook.io/wealth-token-docs/technical-architecture/product-roadmap" },
       ],
     },
     {
       title: "Community",
       items: [
-        { name: "Discord", href: "https://discord.gg/K2kBy5Nr" },
+        { name: "Discord", href: "https://discord.gg/yhvExNh7PK" },
         { name: "Telegram", href: "https://t.me/thewealthcrypto" },
         {
           name: "Telegram Community",
@@ -94,10 +94,10 @@ export default function Footer() {
     {
       title: "Support",
       items: [
-        { name: "FAQ", href: "#faq" },
-        { name: "Help Center", href: "#help-center" },
-        { name: "Contact Us", href: "#contact-us" },
-        { name: "Partner with Us", href: "#partner-with-us" },
+        // { name: "FAQ", href: "#faq" },
+        // { name: "Help Center", href: "#help-center" },
+        { name: "Contact Us", href: "mailto:hi@wealthcrypto.fund" },
+        // { name: "Partner with Us", href: "#partner-with-us" },
       ],
     },
   ];
@@ -281,10 +281,10 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-4 text-sm text-[#07563f]/80">
-              <a href="#" className="hover:text-[#00b67a] transition">
+              <a href="https://wealth-token.gitbook.io/wealth-token-docs/legal-and-compliance/privacy-policy" className="hover:text-[#00b67a] transition">
                 {footer.bottomLinks?.privacy}
               </a>
-              <a href="#" className="hover:text-[#00b67a] transition">
+              <a href="https://wealth-token.gitbook.io/wealth-token-docs/legal-and-compliance/terms-of-use" className="hover:text-[#00b67a] transition">
                 {footer.bottomLinks?.terms}
               </a>
             </div>
