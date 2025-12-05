@@ -57,7 +57,7 @@ const JourneySection = () => {
       description:
         "Visibility on aggregators, product and core brand partner development, and token listings.",
       quarter: "Q1 2026",
-      status: "done",
+      status: "planned",
       features: [
         "Visibility on CMC and CoinGecko",
         "Token listing on INDODAX",
@@ -214,9 +214,9 @@ const JourneySection = () => {
       <GrowthPink className="absolute top-16 right-2/4 w-24 h-24 md:w-24 md:h-24 pointer-events-none z-0" />
       <LineSpringGreen className="absolute top-28 left-2/4 w-24 h-24 md:w-32 md:h-32 pointer-events-none z-0" />
 
-      <div className="absolute bottom-0 z-10 pointer-events-none w-full h-1/3 md:h-1/2">
+      {/* <div className="absolute bottom-0 z-10 pointer-events-none w-full h-1/3 md:h-1/2">
         <Image src={Euforia} alt="Euforia background" fill className="object-cover w-full" />
-      </div>
+      </div> */}
     </motion.div>
   );
 };
