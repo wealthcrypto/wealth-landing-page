@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import JoinImages from "@/public/assets/JoinImages.svg";
+import JoinImages from "@/public/cards/FAQ.svg";
 import { ArrowRight } from "lucide-react";
 import CircleRed from "@/public/assets/CircleRed.svg";
 

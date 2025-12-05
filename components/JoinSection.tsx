@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import JoinImages from "@/public/assets/JoinImages.svg";
+import JoinImages from "@/public/cards/Lifestyle.svg";
 import Lifestyle from "@/public/assets/Lifestyle.svg";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
