@@ -38,13 +38,12 @@ const FaqContinue = () => {
             </a>
           </div>
         </div>
-        <div className="w-full lg:w-5/12 flex justify-center">
+        <div className="w-full lg:w-6/12 flex justify-center">
           <Image 
             src={JoinImages} 
             alt="Join Images" 
-            width={480} 
-            height={320} 
-            className="w-full max-w-sm lg:max-w-none h-auto object-contain" 
+            
+            className="w-full h-full object-contain" 
           />
         </div>
       </div>

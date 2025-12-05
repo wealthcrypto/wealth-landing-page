@@ -42,7 +42,7 @@ const CommunitySection = () => {
           </div>
 
           <div className="w-full flex justify-center lg:justify-end">
-            <div className="transform rotate-1 translate-x-0 lg:translate-x-6 bg-[#77FFC1] min-h-24 sm:min-h-32 lg:min-h-36 rounded-[18px] px-4 py-3 sm:px-6 sm:py-5 w-60 sm:w-72 shadow-md">
+            <div className="transform rotate-1 translate-x-0 lg:translate-x-6 bg-[#77FFC1] min-h-24 sm:min-h-32 lg:min-h-36 rounded-[18px] px-4 py-3 sm:px-6 sm:py-5 w-60 sm:w-72 shadow-md flex items-center">
               <p className="text-lg sm:text-xl lg:text-2xl">Real-life Events</p>
               {/* <span className="text-sm sm:text-base block mt-1">
                 Exclusive experiences for the community
@@ -51,7 +51,7 @@ const CommunitySection = () => {
             </div>
           </div>
 
-          <div className="transform -rotate-2 -translate-y-1 translate-x-0 lg:translate-x-3 min-h-24 sm:min-h-32 lg:min-h-36 bg-[#ff5e8f] text-white rounded-[18px] px-4 py-4 sm:px-6 sm:py-6 w-60 sm:w-72 shadow-lg">
+          <div className="transform -rotate-2 -translate-y-1 translate-x-0 lg:translate-x-3 min-h-24 sm:min-h-32 lg:min-h-36 bg-[#ff5e8f] text-white rounded-[18px] px-4 py-4 sm:px-6 sm:py-6 w-60 sm:w-72 shadow-lg  flex items-center">
             <p className="text-lg sm:text-xl lg:text-2xl">Community Support</p>
             {/* <span className="text-sm sm:text-base block mt-1">
               24/7 help from fellow members
