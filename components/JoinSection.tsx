@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const JoinSection = () => {
   return (
-    <div className="bg-[#19CC85] w-full flex justify-center items-center px-4">
+    <div className="bg-[#19CC85] w-full flex justify-center items-center pl-2">
       <div className="w-full flex flex-col lg:flex-row justify-end items-center ">
         <div className="flex flex-col text-white min-w-6/12 space-y-4 lg:space-y-6 text-center lg:text-left">
           <div className="">
@@ -30,7 +30,7 @@ const JoinSection = () => {
             <a href="#joinnow">
               <div className="mt-4 lg:mt-6 max-w-fit bg-transparent font-bold pr-2 ps-4 lg:ps-6 text-white py-2 rounded-full border-2 border-white transition flex gap-2 lg:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86]">
                 <span className="text-base lg:text-lg">Join Now</span>
-                <div className="transform rotate-[-45deg] bg-white rounded-full ml-1 lg:ml-2 p-2 lg:p-3 xl:p-4 text-[#1dcb86]">
+                <div className="transform rotate-[-45deg] bg-white rounded-full ml-1 lg:ml-2 p-4 text-[#1dcb86]">
                   <ArrowRight className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
                 </div>
               </div>
@@ -38,11 +38,13 @@ const JoinSection = () => {
           </div>
         </div>
         <div className="flex justify-end w-6/12 ">
-          <Image 
-            src={JoinImages} 
-            alt="Join Images" 
-            className="object-cover w-full" 
-          />
+          <div className="w-full overflow-hidden">
+            <Image
+              src={JoinImages}
+              alt="Join Images"
+              className="-m-2 w-[calc(100%+20px)] ml-1 h-[calc(100%+20px)] object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
