@@ -35,7 +35,7 @@ const FutureSection = () => {
           </p>
           
           <div className="flex justify-center pt-2 md:pt-4">
-            <a href="" className="inline-block">
+            <a href="#joinnow" className="inline-block">
               <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-white py-2 md:py-3 rounded-full border-2 border-white transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-white hover:text-[#1dcb86] group">
                 <span className="text-sm md:text-base lg:text-lg">Join Now</span>
                 <div className="transform rotate-[-45deg] bg-white rounded-full p-2 md:p-3 lg:p-4 text-[#1dcb86] group-hover:bg-[#1dcb86] group-hover:text-white transition-colors">

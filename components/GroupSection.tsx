@@ -9,7 +9,7 @@ import CircleRed from "./icons/CircleRed";
 
 const GroupSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 py-16 md:py-16 w-11/12 md:w-10/12 lg:w-9/12 mx-auto px-4 relative">
+    <div id="joinnow" className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 py-16 md:py-16 w-11/12 md:w-10/12 lg:w-9/12 mx-auto px-4 relative">
       {/* Decorative icons: on small screens placed top-left of the cards, on md+ keep original positions */}
       <StarsGreen className="absolute top-1/2 left-0 md:top-0 md:left-1/2 w-24 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 pointer-events-none select-none z-30" />
       <CircleRed className="absolute top-0 left-0 md:top-0 md:-left-10 w-24 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 pointer-events-none select-none z-0" />
@@ -57,9 +57,9 @@ const GroupSection = () => {
           </a>
         </div>
       </div>
-      <div className="absolute bottom-0 z-0 pointer-events-none w-dvw h-full">
+      {/* <div className="absolute bottom-0 z-0 pointer-events-none w-dvw h-full">
               <Image src={Euforia} alt="Euforia background" fill className="object-cover w-full" />
-            </div>
+            </div> */}
     </div>
   );
 };

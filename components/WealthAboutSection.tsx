@@ -10,10 +10,10 @@ const WealthAboutSection = () => {
     <div className="">
       <div className="relative h-full py-12 sm:py-16 md:py-24 lg:py-40 xl:py-60">
         {/* Background div covering only 60% from top */}
-        <div
+        {/* <div
           className="absolute bottom-0 left-0 right-0 h-[80%] bg-top bg-cover z-0"
           style={{ backgroundImage: `url(${BackgroundVector.src})` }}
-        ></div>
+        ></div> */}
         <div className="flex flex-col w-11/12 md:w-10/12 lg:w-9/12 items-start justify-center mx-auto z-50 relative px-4 lg:px-0">
           <div className="w-full">
             <div className="flex flex-col sm:flex-row sm:items-center mr-2 sm:mr-4 md:mr-8 space-y-2 sm:space-y-0 sm:space-x-3 mb-6">

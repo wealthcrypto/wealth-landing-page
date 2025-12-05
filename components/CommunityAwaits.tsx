@@ -24,7 +24,7 @@ const CommunityAwaits = () => {
           <span className="text-lg font-body">
             Don&apos;t just hold WEALTH—live it! Join thousands of members who are already discovering extraordinary experiences and building lasting friendships.
           </span>
-          <a href="">
+          <a href="#joinnow">
             <div className="mt-6 max-w-fit bg-transparent  font-bold pr-2 ps-6 text-white py-2 rounded-full border-2 border-white  transition flex gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86]">
               Join Now
               <div

@@ -27,7 +27,7 @@ const JoinSection = () => {
             Join the live-to-Earn movement today.
           </span>
           <div className="flex justify-center lg:justify-start">
-            <a href="">
+            <a href="#joinnow">
               <div className="mt-4 lg:mt-6 max-w-fit bg-transparent font-bold pr-2 ps-4 lg:ps-6 text-white py-2 rounded-full border-2 border-white transition flex gap-2 lg:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86]">
                 <span className="text-base lg:text-lg">Join Now</span>
                 <div className="transform rotate-[-45deg] bg-white rounded-full ml-1 lg:ml-2 p-2 lg:p-3 xl:p-4 text-[#1dcb86]">
