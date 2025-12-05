@@ -76,7 +76,7 @@ const JourneySection = () => {
         "Pilot event activation with brand partners",
         "Initial product features launch",
         "Campaign in TOKEN2049 Dubai and Singapore",
-        "Token listing on TKO, Reku, and Pintu"
+        "Token listing on other local exchange"
       ]
     },
     {
