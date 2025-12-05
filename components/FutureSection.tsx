@@ -19,7 +19,7 @@ const FutureSection = () => {
     //     backgroundPosition: "center",
     //   }}
     // >
-      <div className="w-full flex flex-col md:flex-row justify-center bg-[#19CC85] items-center relative p-5 md:p-10 lg:p-16 gap-6 md:gap-0">
+      <div className="w-full flex flex-col md:flex-row justify-center bg-[#19CC85] items-center relative p-2 gap-6 md:gap-0">
         {/* <AscendYellow className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 w-16 h-8 md:w-32 md:h-16 lg:w-40 lg:h-20 pointer-events-none" /> */}
         {/* <CirclePink className="absolute -top-6 md:-top-12 lg:-top-16 -left-6 md:-left-12 lg:-left-16 w-12 h-12 md:w-24 md:h-24 lg:w-32 lg:h-32 pointer-events-none " /> */}
         <motion.div
@@ -108,7 +108,7 @@ const FutureSection = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-white py-2 md:py-3 rounded-full border-2 border-white transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-white hover:text-[#1dcb86] group">
+          <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-white py-2 md:py-2 rounded-full border-2 border-white transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-white hover:text-[#1dcb86] group">
             <span className="text-sm md:text-base lg:text-lg">
           Join Now
             </span>
