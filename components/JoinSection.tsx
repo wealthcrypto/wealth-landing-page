@@ -8,16 +8,16 @@ import { motion } from "framer-motion";
 const JoinSection = () => {
   return (
     <div className="bg-[#19CC85] w-full flex justify-center items-center px-4">
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-between items-center py-8 lg:py-10 gap-8 lg:gap-0">
-        <div className="flex flex-col text-white w-full lg:max-w-lg space-y-4 lg:space-y-6 text-center lg:text-left">
+      <div className="w-full flex flex-col lg:flex-row justify-end items-center ">
+        <div className="flex flex-col text-white min-w-6/12 space-y-4 lg:space-y-6 text-center lg:text-left">
           <div className="">
-            <span className="text-3xl sm:text-4xl lg:text-6xl block lg:inline">Ready to Elevate</span>
-            <div className="text-3xl sm:text-4xl lg:text-6xl flex flex-col sm:flex-row items-center justify-center lg:justify-start -mt-1 lg:-mt-3">
+            <span className="text-4xl sm:text-5xl lg:text-7xl block lg:inline">Ready to Elevate</span>
+            <div className="text-4xl sm:text-5xl lg:text-7xl flex flex-col sm:flex-row items-center justify-center lg:justify-start -mt-1 lg:-mt-3">
               <span className="mr-0 sm:mr-2">Your</span>
               <Image
                 src={Lifestyle}
                 alt="Lifestyle"
-                className="inline-block ml-0 sm:ml-2 h-20 w-28 sm:h-28 sm:w-36 lg:h-36 lg:w-48 mt-2 sm:mt-0"
+                className="inline-block ml-0 sm:ml-2 h-24 w-32 sm:h-32 sm:w-40 lg:h-40 lg:w-52 mt-2 sm:mt-0"
               />
             </div>
           </div>
@@ -37,11 +37,11 @@ const JoinSection = () => {
             </a>
           </div>
         </div>
-        <div className="w-full lg:w-auto flex justify-center">
+        <div className="flex justify-end w-6/12 ">
           <Image 
             src={JoinImages} 
             alt="Join Images" 
-            className="h-auto w-full max-w-sm lg:max-w-none lg:h-full object-contain" 
+            className="object-cover w-full" 
           />
         </div>
       </div>
