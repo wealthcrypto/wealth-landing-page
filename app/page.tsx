@@ -31,7 +31,7 @@ export default function Home() {
           <WealthHeroSection />
         </div>
       </div>
-      <div className="flex items-center justify-center py-8 md:py-12">
+      <div className="flex items-center justify-center py-2 md:py-4">
         <div className="h-[1px] w-3/4 bg-[#19CC85]" />
       </div>
       {/* <WealthExperience /> */}
