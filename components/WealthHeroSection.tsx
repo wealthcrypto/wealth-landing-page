@@ -2,7 +2,7 @@
 
 import React from "react";
 import GoodLife from "@/public/good_life.png";
-import CyberScope from "@/public/assets/Cyberscope.png";
+import CyberScope from "@/public/assets/CB.png";
 import Coinstore from "@/public/assets/Coinstore1.png";
 import { ArrowRight, Percent } from "lucide-react";
 import Image from "next/image";
