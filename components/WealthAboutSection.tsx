@@ -8,7 +8,7 @@ import JoinSection from "./JoinSection";
 const WealthAboutSection = () => {
   return (
     <div className="">
-      <div className="relative h-full py-12 sm:py-16 md:py-24 lg:py-40 xl:py-60">
+      <div className="relative h-full py-5 sm:py-10 md:py-12 lg:py-40 xl:py-60">
         {/* Background div covering only 60% from top */}
         {/* <div
           className="absolute bottom-0 left-0 right-0 h-[80%] bg-top bg-cover z-0"
