@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Concert_One, Varela_Round, Delius } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -48,7 +49,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-[#FDEFEF] text-wealth-navy antialiased`}>
         <LanguageProvider>
-          <FirebaseAnalytics />
+          <Suspense fallback={null}>
+            <FirebaseAnalytics />
+          </Suspense>
           {children}
         </LanguageProvider>
       </body>
