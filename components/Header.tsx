@@ -40,12 +40,15 @@ export default function Header() {
 
             {/* Action Buttons - Hidden on mobile, shown on md+ */}
             <div className="hidden md:flex items-center gap-4">
-                <button className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2">
+                <a
+                    href="mailto:hi@wealthcrypto.fund"
+                    className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2"
+                >
                     Contact Us
                     <div className="-rotate-45 bg-[#1dcb86] rounded-full p-2">
                         <ArrowRight className="h-4 w-4" />
                     </div>
-                </button>
+                </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -83,12 +86,16 @@ export default function Header() {
                             );
                         })}
                         <div className="flex flex-col items-center gap-4 mt-4">
-                            <button className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2">
+                            <a
+                                href="mailto:hi@wealthcrypto.fund"
+                                className="ps-4 pe-1 py-1 border border-[#1dcb86] rounded-full inline-flex items-center gap-2"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
                                 Contact Us
                                 <div className="-rotate-45 bg-[#1dcb86] rounded-full p-2">
                                     <ArrowRight className="h-4 w-4" />
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     </nav>
                 </div>

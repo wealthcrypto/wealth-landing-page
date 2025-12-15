@@ -213,11 +213,18 @@ export default function WealthHeroSection() {
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
             />
             <span className="text-lg md:text-xl">Listed on :</span>
-            <Image
-              src={Coinstore}
-              alt="Coinstore"
-              className="w-40 sm:w-60 md:w-72 h-auto mb-5"
-            />
+            <a
+              href="https://www.coinstore.com/spot/WEALTHUSDT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Image
+                src={Coinstore}
+                alt="Coinstore"
+                className="w-40 sm:w-60 md:w-72 h-auto mb-5"
+              />
+            </a>
             <div
               aria-hidden="true"
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
@@ -232,11 +239,18 @@ export default function WealthHeroSection() {
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
             />
             <span className="text-lg md:text-xl">Audited by :</span>
-            <Image
-              src={CyberScope}
-              alt="CyberScope"
-              className="w-40 sm:w-60 md:w-80 h-auto"
-            />
+            <a
+              href="https://www.cyberscope.io/audits/3-wealth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Image
+                src={CyberScope}
+                alt="CyberScope"
+                className="w-40 sm:w-60 md:w-80 h-auto"
+              />
+            </a>
             <div
               aria-hidden="true"
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
