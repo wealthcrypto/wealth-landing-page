@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Concert_One, Varela_Round, Delius } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
 /* 
   ═══════════════════════════════════════════════
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-[#FDEFEF] text-wealth-navy antialiased`}>
         <LanguageProvider>
+          <FirebaseAnalytics />
           {children}
         </LanguageProvider>
       </body>
