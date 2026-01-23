@@ -76,6 +76,7 @@ const config: Config = {
         body: ['var(--font-varela-round)', 'sans-serif'],
         accent: ['var(--font-delius)', 'cursive'],
         reflet: ['Reflet des Ombres', 'cursive'],
+        dmsans: ['var(--font-dm-sans)', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',

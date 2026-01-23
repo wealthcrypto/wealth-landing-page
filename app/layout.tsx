@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Concert_One, Varela_Round, Delius } from "next/font/google";
+import { Concert_One, Varela_Round, Delius, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import FirebaseAnalytics from "@/components/FirebaseAnalytics";
+import FirebaseAnalytics from "@/components/temp/FirebaseAnalytics";
 
 /* 
   ═══════════════════════════════════════════════
@@ -34,6 +34,13 @@ const delius = Delius({
   weight: '400',
 });
 
+const dmSans = DM_Sans({ 
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-dm-sans',
+  weight: ['400', '500', '700'],
+});
+
 export const metadata: Metadata = {
   title: "WEALTH Crypto ($WEALTH) - Live the Good Life",
   description: "Unlock curated experiences across sports, music, dining, and community with WEALTH Crypto. Join the lifestyle revolution that's redefining everyday fun.",
@@ -47,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} font-body bg-[#FDEFEF] text-wealth-navy antialiased`}>
+      <body className={`${varelaRound.variable} ${concertOne.variable} ${delius.variable} ${dmSans.variable} font-body antialiased`}>
         <LanguageProvider>
           <Suspense fallback={null}>
             <FirebaseAnalytics />

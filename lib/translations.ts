@@ -177,7 +177,7 @@ export const translations = {
         placeholder: "Enter your email",
         button: "Subscribe"
       },
-      copyright: "© 2025 WealthCrypto ($WEALTH). All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} WealthCrypto ($WEALTH). All rights reserved.`,
       bottomLinks: {
         privacy: "Privacy Policy",
         terms: "Terms & Conditions"

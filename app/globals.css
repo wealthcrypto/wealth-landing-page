@@ -14,12 +14,10 @@
   font-display: swap;
 }
 
-/* 
-  ═══════════════════════════════════════════════
-  🎨 WealthCrypto - PREMIUM LIGHT MODE
+/*
+  WealthCrypto - Premium Light Mode
   Theme: Clean Minimalist with Festival Vibes
-  Colors: Mint Pastel + Coral + Navy Ink
-  ═══════════════════════════════════════════════
+  Colors: Mint Pastel, Coral, and Navy
 */
 
 @layer base {
@@ -72,6 +70,10 @@
 
   .font-accent {
     font-family: var(--font-delius), cursive;
+  }
+
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), sans-serif;
   }
 }
 

@@ -1,72 +1,30 @@
-import WealthHeroSection from "@/components/WealthHeroSection";
-import Header from "@/components/Header";
-import WealthExperience from "@/components/WealthExperience";
-import WealthAboutSection from "@/components/WealthAboutSection";
-import JoinSection from "@/components/JoinSection";
-import JourneySection from "@/components/JourneySection";
-import FutureSection from "@/components/FutureSection";
-import WealthEconomicSection from "@/components/WealthEconomicSection";
-import DistributionSection from "@/components/DistributionSection";
-import BuildSection from "@/components/BuildSection";
-import CommunitySection from "@/components/CommunitySection";
-import GroupSection from "@/components/GroupSection";
-import ReviewSection from "@/components/ReviewSection";
-import CommunityAwaits from "@/components/CommunityAwaits";
-import Footer from "@/components/Footer";
-import FaqSection from "@/components/FaqSection";
-import FaqContinue from "@/components/FaqContinue";
-import FaqSec from "@/public/assets/FaqSection.svg";
-import Image from "next/image";
+import Header from "@/components/common/header";
+import About from "@/components/primary/about";
+import BuildSection from "@/components/primary/BuildSection";
+import DistributionSection from "@/components/primary/DistributionSection";
+import Faq from "@/components/primary/faq";
+import Footer from "@/components/primary/Footer";
+import FutureSection from "@/components/primary/FutureSection";
+import GroupSection from "@/components/primary/GroupSection";
+import HeroComponents from "@/components/primary/hero";
+import JourneySection from "@/components/primary/JourneySection";
 
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden !bg-[#fdefef] px-0">
+    <main className="relative overflow-hidden bg-[#fdefef] w-dvw min-h-dvh px-0 ">
       {/* 🌐 Language Switcher - Fixed top right */}
       {/* <LanguageSwitcher /> */}
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        {/* 🎪 Hero Section - Festival vibes with doodle illustration */}
-        <div className="flex-1">
-          <WealthHeroSection />
-        </div>
-      </div>
-      <div className="flex items-center justify-center py-2 md:py-4">
-        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
-      </div>
-      {/* <WealthExperience /> */}
-
-      <div className="py-8 md:py-16">
-        <WealthAboutSection />
-      </div>
-      
-      <div className="pt-8 md:pt-16">
+      <Header />
+        <HeroComponents />
+        <About />
         <JourneySection />
-      </div>
-      <div className="pb-8 md:pb-16">
         <FutureSection />
-      </div>
-      {/* <WealthEconomicSection /> */}
-      <div className="py-8 md:py-16">
         <DistributionSection />
-      </div>
-      <div className="flex items-center justify-center py-8 md:py-12">
-        <div className="h-[1px] w-3/4 bg-[#19CC85]" />
-      </div>
-      <div className="py-8 md:py-16">
         <BuildSection />
-      </div>
-      
-      <CommunitySection />
-      <GroupSection />
-      {/* <ReviewSection /> */}
-      {/* <div className="overflow-hidden">
-        <Image src={FaqSec} alt="FAQ Section" className="w-full -mt-2 md:-mt-5 mb-6 md:mb-10" />
-      </div> */}
-      {/* <CommunityAwaits /> */}
-      {/* <FaqSection /> */}
-      <FaqContinue />
-      <Footer />
+        <GroupSection />
+        <Faq />
+        <Footer />
     </main>
   );
 }
