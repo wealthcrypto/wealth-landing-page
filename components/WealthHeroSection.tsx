@@ -4,6 +4,7 @@ import React from "react";
 import GoodLife from "@/public/good_life.png";
 import CyberScope from "@/public/assets/CB.png";
 import Coinstore from "@/public/assets/Coinstore1.png";
+import Pionex from "@/public/assets/pionex.png";
 import { ArrowRight, Percent } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -213,18 +214,32 @@ export default function WealthHeroSection() {
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
             />
             <span className="text-lg md:text-xl">Listed on :</span>
-            <a
-              href="https://www.coinstore.com/spot/WEALTHUSDT"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Image
-                src={Coinstore}
-                alt="Coinstore"
-                className="w-40 sm:w-60 md:w-72 h-auto mb-5"
-              />
-            </a>
+            <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8">
+              <a
+                href="https://www.coinstore.com/spot/WEALTHUSDT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Image
+                  src={Coinstore}
+                  alt="Coinstore"
+                  className="w-24 sm:w-32 md:w-40 h-auto"
+                />
+              </a>
+              <a
+                href="https://www.pionex.com/en/trade/WEALTH_USDT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Image
+                  src={Pionex}
+                  alt="Pionex"
+                  className="w-24 sm:w-32 md:w-40 h-auto"
+                />
+              </a>
+            </div>
             <div
               aria-hidden="true"
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
@@ -248,7 +263,7 @@ export default function WealthHeroSection() {
               <Image
                 src={CyberScope}
                 alt="CyberScope"
-                className="w-40 sm:w-60 md:w-80 h-auto"
+                className="w-32 sm:w-48 md:w-56 h-auto"
               />
             </a>
             <div
