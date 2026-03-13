@@ -4,10 +4,12 @@ import React from "react";
 import GoodLife from "@/public/good_life.png";
 import CyberScope from "@/public/assets/CB.png";
 import Coinstore from "@/public/assets/Coinstore1.png";
+import Indodax from "@/public/assets/indodax.png";
 import Pionex from "@/public/assets/pionex.png";
 import { ArrowRight, Percent } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TelegramBlack from "@/public/assets/telegram_black.png";
 
 import Growth from "@/public/Growth.svg";
 import Stars from "@/public/Stars.svg";
@@ -184,8 +186,10 @@ export default function WealthHeroSection() {
           className="mt-8 md:mt-12 inline-block z-50"
         >
           <Link
-            href="/presale"
+            href="https://t.me/thewealthcrypto_community"
             className="inline-flex focus-visible:outline-none"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -194,14 +198,18 @@ export default function WealthHeroSection() {
               className="!bg-[#1dcb86] !text-white ps-4 md:ps-6 pe-2 font-body text-sm sm:text-base md:text-lg py-2 rounded-full inline-flex items-center gap-2"
               type="button"
             >
-              Presale
+              Join Our Telegram
               <motion.div
                 whileHover={{ rotate: 0 }}
-                initial={{ rotate: -45 }}
+                initial={{ rotate: 0 }}
                 transition={{ duration: 0.3 }}
                 className="transform rotate-[-45deg] bg-white rounded-full ml-2 p-2 sm:p-3 md:p-4 text-[#1dcb86]"
               >
-                <Percent className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <Image
+                  src={TelegramBlack}
+                  alt="Telegram"
+                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                />
               </motion.div>
             </motion.button>
           </Link>
@@ -214,31 +222,45 @@ export default function WealthHeroSection() {
               className="w-full h-[2px] bg-[#2ac288] my-4 md:my-0 rounded"
             />
             <span className="text-lg md:text-xl">Listed on :</span>
-            <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8">
+            <div className="flex flex-col items-center justify-center gap-3 sm:gap-4">
               <a
-                href="https://www.coinstore.com/spot/WEALTHUSDT"
+                href="https://indodax.com/trade/WEALTHIDR"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
               >
                 <Image
-                  src={Coinstore}
-                  alt="Coinstore"
-                  className="w-24 sm:w-32 md:w-40 h-auto"
+                  src={Indodax}
+                  alt="Indodax"
+                  className="w-32 sm:w-40 md:w-48 h-auto"
                 />
               </a>
-              <a
-                href="https://www.pionex.com/en/trade/WEALTH_USDT"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Image
-                  src={Pionex}
-                  alt="Pionex"
-                  className="w-24 sm:w-32 md:w-40 h-auto"
-                />
-              </a>
+              <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8">
+                <a
+                  href="https://www.coinstore.com/spot/WEALTHUSDT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Image
+                    src={Coinstore}
+                    alt="Coinstore"
+                    className="w-24 sm:w-32 md:w-40 h-auto"
+                  />
+                </a>
+                <a
+                  href="https://www.pionex.com/en/trade/WEALTH_USDT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Image
+                    src={Pionex}
+                    alt="Pionex"
+                    className="w-24 sm:w-32 md:w-40 h-auto"
+                  />
+                </a>
+              </div>
             </div>
             <div
               aria-hidden="true"
