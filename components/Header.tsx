@@ -6,6 +6,19 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navLinks = [
+        { label: "Home", href: "#home", isExternal: false },
+        {
+            label: "Whitepaper",
+            href: "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/",
+            isExternal: true,
+        },
+        {
+            label: "Redemption",
+            href: "https://redemption.wealthcrypto.fund",
+            isExternal: true,
+        },
+    ];
 
     return (
         <header className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4 md:py-6 lg:py-10 relative">
@@ -16,23 +29,15 @@ export default function Header() {
 
             {/* Navigation Links - Hidden on mobile, shown on md+ */}
             <nav className="hidden md:flex items-center gap-4">
-                {[
-                    "Home",
-                    "Whitepaper",
-                ].map((link) => {
-                    const isExternal = link === "Whitepaper";
-                    const href = isExternal
-                        ? "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/"
-                        : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
-                        
+                {navLinks.map(({ label, href, isExternal }) => {
                     return (
                         <a
-                            key={link}
+                            key={label}
                             href={href}
                             className="px-4 py-1 border rounded-full border-black text-sm font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105"
                             {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         >
-                            {link}
+                            {label}
                         </a>
                     );
                 })}
@@ -64,24 +69,16 @@ export default function Header() {
             {isMenuOpen && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden z-50 h-screen border-t">
                     <nav className="flex flex-col items-center gap-4 py-4">
-                        {[
-                            "Home",
-                            "Whitepaper",
-                        ].map((link) => {
-                            const isExternal = link === "Whitepaper";
-                            const href = isExternal
-                                ? "https://wealth-crypto.gitbook.io/whitepaper.wealth.crypto/"
-                                : `#${link.toLowerCase().replace(/\s+/g, "-")}`;
-
+                        {navLinks.map(({ label, href, isExternal }) => {
                             return (
                                 <a
-                                    key={link}
+                                    key={label}
                                     href={href}
                                     className="px-4 py-2 border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
                                     onClick={() => setIsMenuOpen(false)}
                                     {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                                 >
-                                    {link}
+                                    {label}
                                 </a>
                             );
                         })}
