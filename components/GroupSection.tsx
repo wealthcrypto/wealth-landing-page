@@ -47,7 +47,7 @@ const GroupSection = () => {
             Get instant updates, participate in community polls, and stay
             connected on the go
           </span>
-          <a href="https://t.me/thewealthcrypto_community" className="inline-block w-fit">
+          <a href="https://telegram.me/thewealthcrypto_community" className="inline-block w-fit">
             <div className="bg-transparent font-bold pr-2 pl-4 md:pl-6 text-black py-2 md:py-2 rounded-full border-2 border-black transition flex gap-2 md:gap-3 items-center hover:bg-white hover:border-2 hover:border-[#1dcb86] hover:text-[#1dcb86] group">
               <span className="text-sm md:text-base">Join Us</span>
               <div className="transform rotate-[-45deg] bg-[#F95A8A] rounded-full p-2 md:p-3 lg:p-4 text-white group-hover:bg-white group-hover:text-[#1dcb86] transition-colors">
