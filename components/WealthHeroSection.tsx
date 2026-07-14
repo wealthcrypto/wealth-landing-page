@@ -186,7 +186,7 @@ export default function WealthHeroSection() {
           className="mt-8 md:mt-12 inline-block z-50"
         >
           <Link
-            href="https://t.me/thewealthcrypto_community"
+            href="https://telegram.me/thewealthcrypto_community"
             className="inline-flex focus-visible:outline-none"
             target="_blank"
             rel="noopener noreferrer"
